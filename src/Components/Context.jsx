@@ -6,6 +6,7 @@ export const ContextData=createContext()
 
 const Context = (props) => {
 
+
   const [hotelData, setHotelData] = useState([
   {
     id: 1,
@@ -1675,9 +1676,22 @@ const Context = (props) => {
   const [text, setText] = useState("")
   const [checkInDate, setCheckInDate] = useState("")
   const [checkOutDate,setCheckOutDate]=useState("")
+  // const [room, setRoom] = useState(1)
+  // const [guest, setGuest] = useState(1)
+  const [rmAndGuest, setRmAndGuest] = useState([
+    {
+      id:1,
+      Room:1,
+      Guest:1
+    }
+  ])
+  
   return (
     <div>
-        <ContextData.Provider value={{hotelData,setHotelData,text,setText,checkInDate,setCheckInDate,checkOutDate,setCheckOutDate}}>
+        <ContextData.Provider value={{hotelData,setHotelData,text,setText,checkInDate,setCheckInDate,checkOutDate,setCheckOutDate,
+          rmAndGuest,setRmAndGuest
+        }}
+        >
             {props.children}
         </ContextData.Provider>
     </div>

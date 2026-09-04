@@ -157,7 +157,7 @@
     gap:6px;
   }
  
-  .counter input{
+  .counter span{
     width:26px;
     text-align:center;
     font-family:'Manrope', sans-serif;
@@ -183,7 +183,169 @@
     font-size:13px;
     color:var(--dusk);
   }
+  .rg-box {
+    width: 210px;
+    background: #F4FAFF;
+    border: 1px solid #8789C0;
+    position: absolute;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(8, 9, 10, 0.12);
+    z-index: 999px;
+    min-height: 70px; 
+    transform: translate3d(568px,80px,0);
+  }
  
+  /* ===== Header ===== */
+  .rg-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: #8789C0;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+  }
+ 
+  .rg-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #F4FAFF;
+    letter-spacing: 0.3px;
+  }
+ 
+  .rg-cancel {
+    font-size: 14px;
+    color: #F4FAFF;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+  }
+ 
+  .rg-cancel:hover {
+    background: rgba(8, 9, 10, 0.25);
+  }
+ 
+  /* ===== Column labels: Room / Guest ===== */
+  .rg-columns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 14px 6px;
+    border-bottom: 1px solid #dfe9f5;
+  }
+ 
+  .rg-col-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #8789C0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+ 
+  /* ===== Body: list of rooms (this section grows) ===== */
+  .rg-body {
+    display: flex;
+    flex-direction: column;
+    padding: 4px 0;
+  }
+ 
+  .rg-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 14px;
+    border-bottom: 1px solid #dfe9f5;
+    transition: background 0.2s ease;
+  }
+ 
+  .rg-row:last-child {
+    border-bottom: none;
+  }
+ 
+  .rg-row:hover {
+    background: #e7f2ff;
+  }
+ 
+  .rg-room-label {
+    font-size: 13.5px;
+    color: #08090A;
+    font-weight: 500;
+  }
+ 
+  .rg-room-label i {
+    color: #7CC6FE;
+    margin-right: 8px;
+    width: 14px;
+    text-align: center;
+  }
+ 
+  /* ===== Guest quantity control: - qty + ===== */
+  .rg-qty-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+ 
+  .rg-qty-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #7CC6FE;
+    color: #08090A;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+  }
+ 
+  .rg-qty-btn:hover {
+    background: #8789C0;
+    color: #F4FAFF;
+  }
+ 
+  .rg-qty-btn:active {
+    transform: scale(0.9);
+  }
+ 
+  .rg-qty-value {
+    min-width: 16px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: #08090A;
+  }
+ 
+  /* Optional: footer / add-room hook, remove if not needed */
+  .rg-footer {
+    padding: 8px 14px 12px;
+    font-size: 12px;
+    color: #8789C0;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+ 
+  .rg-footer i {
+    font-size: 11px;
+  }
+ 
+  .rg-footer:hover {
+    color: #08090A;
+  }
+  /* .room-main{
+    z-index: 3;
+    display: none;
+  } */
   /* ---------- search button ---------- */
   .search-btn{
     display:flex;
@@ -262,15 +424,16 @@
   html,body{ margin:0; padding:0; }
  
   .hotel-main{
-    min-height:100vh;
+    /* min-height:100vh; */
     display:flex;
     align-items:center;
     justify-content:center;
     padding:56px 20px;
     background:
-      radial-gradient(ellipse 1100px 550px at 50% -12%, #e2f2ff 0%, #eaf3fd 55%, #e7eefb 100%);
+    radial-gradient(ellipse 1100px 550px at 50% -12%, #e2f2ff 0%, #eaf3fd 55%, #e7eefb 100%);
     font-family:'Inter', sans-serif;
     color: var(--ink);
+    min-height: 500px;
   }
  
   /* ---------- Card shell ---------- */

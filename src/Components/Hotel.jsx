@@ -5,7 +5,15 @@ import { ContextData } from './Context'
 const Hotel = () => {
     const {hotelData,setHotelData} = useContext(ContextData)
     const {text,setText} = useContext(ContextData)
+    const {checkInDate,setCheckInDate} = useContext(ContextData)
+    const {checkOutDate,setCheckOutDate} = useContext(ContextData)
     const data=hotelData.filter((e)=>e.address.includes(text))
+    // if(hotelData[0].availableFrom<=checkInDate && hotelData[0].availableTo>=checkOutDate){
+    //   console.log(hotelData[0]);
+    // }else{
+    //   console.log("not possible");
+      
+    // }
   return (
     <div className='hotel-main'>
       <div className="hotel-card">

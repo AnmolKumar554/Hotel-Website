@@ -14,7 +14,6 @@ const App = () => {
   return (
     <div>
       <Nav></Nav>
-      
       <Routes>
         <Route path='/data' element={<Hotel />}></Route>
       </Routes>
