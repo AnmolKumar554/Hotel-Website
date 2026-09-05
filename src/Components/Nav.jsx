@@ -4,9 +4,9 @@ import { ContextData } from "./Context"
 
 const Nav = () => {
 
-  function submit(e){
-    e.preventDefault()
-  }
+  
+  const {hotelData,setHotelData} = useContext(ContextData)
+  const {fData,setFData} = useContext(ContextData)
   const [display, setDisplay] = useState(false)
   const {text,setText} = useContext(ContextData)
   const {checkInDate,setCheckInDate} = useContext(ContextData)
@@ -23,6 +23,12 @@ const Nav = () => {
     )
   }
 
+  function submit(e){
+    e.preventDefault()
+    setFData(hotelData.filter((el)=> el.address.includes(text)))
+    console.log(fData);
+  }
+
   return (
     <div>
       <nav className="navbar">
@@ -33,7 +39,11 @@ const Nav = () => {
             <i className="fa-solid fa-location-dot"></i>
             <div className="field-text">
               <label for="destination">Destination</label>
-              <input id="destination" type="text" placeholder="Search city or hotel" value={text} onChange={(e)=>{
+              <input id="destination" type="text" placeholder="Search city or hotel" value={text} onKeyDown={(e)=>{
+                if(e.key="Enter"){
+                  setFData(hotelData.filter((e)=> e.address.includes(text)))
+                }
+              }} onChange={(e)=>{
                 setText(e.target.value)
               }}></input>
             </div>
@@ -42,24 +52,24 @@ const Nav = () => {
           <div className="field">
             <i className="fa-solid fa-calendar-days"></i>
             <div className="field-text">
-        <label>Date</label>
-        <div className="date-row">
-          <div className="date-col">
-            <span className="date-sublabel">Check-in</span>
-            <input className="date-input" id="checkin" type="date" aria-label="Check-in date" value={checkInDate} onChange={(e)=>{
-              setCheckInDate(e.target.value)
-            }}></input>
+              <label>Date</label>
+              <div className="date-row">
+                <div className="date-col">
+                  <span className="date-sublabel">Check-in</span>
+                  <input className="date-input" id="checkin" type="date" aria-label="Check-in date" value={checkInDate} onChange={(e)=>{
+                    setCheckInDate(e.target.value)
+                  }}></input>
+                </div>
+                <div className="date-divider"></div>
+                <div className="date-col">
+                  <span className="date-sublabel">Check-out</span>
+                  <input className="date-input" id="checkout" type="date" aria-label="Check-out date" value={checkOutDate} onChange={(e)=>{
+                    setCheckOutDate(e.target.value)
+                  }} ></input>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="date-divider"></div>
-          <div className="date-col">
-            <span className="date-sublabel">Check-out</span>
-            <input className="date-input" id="checkout" type="date" aria-label="Check-out date" value={checkOutDate} onChange={(e)=>{
-              setCheckOutDate(e.target.value)
-            }} ></input>
-          </div>
-        </div>
-      </div>
-    </div>
         
         <div className="field" onClick={()=>{
           setDisplay(true)
@@ -115,15 +125,21 @@ const Nav = () => {
               </div>
             </div>
           
-            <div class="rg-footer" id="rgAddRoom">
+            <button class="rg-footer" id="rgAddRoom">
               <i class="fa-solid fa-plus"></i> Add Room
-            </div>
+            </button>
+            <button class="rg-footer" id="rgAddRoom">
+              <i class="fa-solid fa-minus"></i>
+              Remove Room
+            </button>
           </div>
           </div>
           </>
          })
 }
-          <button type="submit" className="search-btn">
+          <button type="submit" className="search-btn" onClick={()=>{
+            setFData(hotelData.filter((e)=> e.address.includes(text)))
+          }}>
             <i className="fa-solid fa-magnifying-glass"></i>
             <span>Search</span>
           </button>
