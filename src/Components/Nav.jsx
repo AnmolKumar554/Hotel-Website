@@ -74,25 +74,23 @@ const Nav = () => {
         <div className="field" onClick={()=>{
           setDisplay(true)
         }} >
-              <i className="fa-solid fa-user-group"></i>
-              <div className="field-text">
-                <label>Rooms &amp; guests</label>
-                <div className="counter-row">
-                  <div className="counter">
-                    <span type="number">1</span>
-                    <span>room</span>
-                  </div>
-                  <div className="counter">
-                    <span type="number"  aria-label="Guests">1</span>
-                    <span>guests</span>
-                  </div>
-                </div>
-              </div>
+        <i className="fa-solid fa-user-group"></i>
+        <div className="field-text">
+          <label>Rooms &amp; guests</label>
+          <div className="counter-row">
+            <div className="counter">
+              <span type="number">1</span>
+              <span>room</span>
+            </div>
+            <div className="counter">
+              <span type="number"  aria-label="Guests">1</span>
+              <span>guests</span>
+            </div>
+            </div>
+          </div>
         </div>
-        { display &&
-          rmAndGuest.map((e)=>{
-            return <>
-            <div class="rg-box" id="rgBox" key={e.id}  >
+        {display &&
+            <div class="rg-box" id="rgBox"   >
 
             <div class="rg-header">
               <span class="rg-title">Room &amp; Guests</span>
@@ -105,26 +103,28 @@ const Nav = () => {
               <span class="rg-col-label">Room</span>
               <span class="rg-col-label">Guest</span>
             </div>
- 
-            <div class="rg-body" id="rgBody">
-              <div class="rg-row">
-                <span class="rg-room-label"><i class="fa-solid fa-bed"></i>Room {e.Room}</span>
-              <div class="rg-qty-control">
-                <button class="rg-qty-btn rg-qty-minus" onClick={()=>{
-                  if(e.Guest>1){
-                    update(e.id,e.Guest-1)
-                  }
+              {
+                
+              }
+              {/* <div class="rg-body" id="rgBody">
+                <div class="rg-row">
+                  <span class="rg-room-label"><i class="fa-solid fa-bed"></i>Room {e.Room}</span>
+                <div class="rg-qty-control">
+                  <button class="rg-qty-btn rg-qty-minus" onClick={()=>{
+                    if(e.Guest>1){
+                      update(e.id,e.Guest-1)
+                    }
 
-                }}><i class="fa-solid fa-minus"></i></button>
-                <span class="rg-qty-value">{e.Guest}</span>
-                <button class="rg-qty-btn rg-qty-plus" onClick={()=>{
-                  if(e.Guest<5){
-                    update(e.id,e.Guest+1)
-                  }
-                }}><i class="fa-solid fa-plus"></i></button>
-              </div>
-            </div>
-          
+                  }}><i class="fa-solid fa-minus"></i></button>
+                  <span class="rg-qty-value">{e.Guest}</span>
+                  <button class="rg-qty-btn rg-qty-plus" onClick={()=>{
+                    if(e.Guest<5){
+                      update(e.id,e.Guest+1)
+                    }
+                  }}><i class="fa-solid fa-plus"></i></button>
+                </div>
+              </div> */}
+            
             <button class="rg-footer" id="rgAddRoom">
               <i class="fa-solid fa-plus"></i> Add Room
             </button>
@@ -133,17 +133,15 @@ const Nav = () => {
               Remove Room
             </button>
           </div>
-          </div>
-          </>
-         })
-}
+          }
+          
+          
           <button type="submit" className="search-btn" onClick={()=>{
             setFData(hotelData.filter((e)=> e.address.includes(text)))
           }}>
             <i className="fa-solid fa-magnifying-glass"></i>
             <span>Search</span>
           </button>
-            
         </form>
       </nav>
     </div>

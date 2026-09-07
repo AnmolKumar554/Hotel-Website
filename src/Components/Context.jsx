@@ -2566,12 +2566,17 @@ const Context = (props) => {
   // const [room, setRoom] = useState(1)
   // const [guest, setGuest] = useState(1)
   const [rmAndGuest, setRmAndGuest] = useState([
-    {
-      id:1,
-      Room:1,
-      Guest:1
-    }
-  ])
+{
+  id:1,
+  Room:1,
+  Guest:1
+  },
+{
+  id:2,
+  Room:2,
+  Guest:1
+}
+])
   
   return (
     <div>
