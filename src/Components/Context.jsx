@@ -2571,17 +2571,34 @@ const Context = (props) => {
   Room:1,
   Guest:1
   },
-{
-  id:2,
-  Room:2,
-  Guest:1
-}
+])
+  const [rmData, setRmData] = useState([
+  // {
+  //   id:2,
+  //   Room:id,
+  //   Guest:1
+  // },
+  // {
+  //   id:3,
+  //   Room:id,
+  //   Guest:1
+  // },
+  // {
+  //   id:4,
+  //   Room:id,
+  //   Guest:1
+  // },
+  // {
+  //   id:5,
+  //   Room:id,
+  //   Guest:1
+  // }
 ])
   
   return (
     <div>
         <ContextData.Provider value={{hotelData,setHotelData,text,setText,checkInDate,setCheckInDate,checkOutDate,setCheckOutDate,
-          rmAndGuest,setRmAndGuest,fData,setFData,
+          rmAndGuest,setRmAndGuest,fData,setFData,rmData,setRmData
         }}
         >
             {props.children}

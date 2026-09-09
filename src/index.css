@@ -463,7 +463,6 @@
   .hotel-card__media img{
     width:100%;
     height:100%;
-    /* display:block; */
     object-fit:cover;
   }
  
@@ -668,4 +667,119 @@
     .stay-divider{ margin:0 14px; }
     .hotel-card__footer{ flex-wrap:wrap; }
     .book-btn{ flex:1 1 auto; text-align:center; }
+  }
+
+  /* footer css */
+ 
+  .site-footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 4.5rem 6vw 0;
+    border-top: 1px solid rgba(135, 137, 192, 0.35);
+  }
+ 
+  .footer-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 3.5rem;
+  }
+ 
+  .footer-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.35rem;
+    color: var(--mint);
+    margin: 0 0 1.1rem;
+  }
+ 
+  .footer-about p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--paper);
+    opacity: 0.8;
+    max-width: 32ch;
+    margin: 0;
+  }
+ 
+  .footer-block ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+ 
+  .footer-block a {
+    color: var(--paper);
+    text-decoration: none;
+    font-size: 0.95rem;
+    opacity: 0.85;
+    transition: color 0.2s ease, opacity 0.2s ease;
+  }
+ 
+  .footer-block a:hover,
+  .footer-block a:focus-visible {
+    color: var(--sky);
+    opacity: 1;
+  }
+ 
+  address {
+    font-style: normal;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--paper);
+    opacity: 0.8;
+  }
+ 
+  .footer-bottom {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 1.5rem 0 2rem;
+    border-top: 1px solid rgba(135, 137, 192, 0.25);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.82rem;
+    color: var(--slate);
+  }
+ 
+  .footer-legal {
+    display: flex;
+    gap: 1.5rem;
+  }
+ 
+  .footer-legal a {
+    color: var(--slate);
+    text-decoration: none;
+  }
+ 
+  .footer-legal a:hover,
+  .footer-legal a:focus-visible {
+    color: var(--sky);
+  }
+ 
+  @media (max-width: 800px) {
+    .footer-inner {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 2.5rem;
+    }
+    .footer-about {
+      grid-column: 1 / -1;
+    }
+  }
+ 
+  @media (max-width: 480px) {
+    .footer-inner {
+      grid-template-columns: 1fr;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }

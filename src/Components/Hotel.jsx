@@ -33,7 +33,6 @@ const Hotel = () => {
             <h2 className="hotel-card__name">{e.name}</h2>
             <p className="hotel-card__address">
               <i class="fa-solid fa-location-dot"></i>
-              {/* 14 Baga Beach Road, Calangute, Goa 403516 */}
               {e.expandedAddress}
             </p>
             <ul class="amenities">
