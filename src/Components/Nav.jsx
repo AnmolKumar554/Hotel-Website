@@ -135,10 +135,7 @@ const Nav = () => {
                   </>
                 })}
               </div>
-            <button class="rg-footer" id="rgAddRoom" onClick={()=>{
-              const newData=[...rmAndGuest];
-              setRmAndGuest(newData)
-            }}>
+            <button class="rg-footer" id="rgAddRoom">
               <i class="fa-solid fa-plus"></i> Add Room
             </button>
             <button class="rg-footer" id="rgAddRoom">
