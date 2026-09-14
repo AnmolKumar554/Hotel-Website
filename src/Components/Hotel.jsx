@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useContext } from 'react'
 import { ContextData } from './Context'
+import { useNavigate } from 'react-router-dom'
 
 const Hotel = () => {
     const {hotelData,setHotelData} = useContext(ContextData)
@@ -9,6 +10,12 @@ const Hotel = () => {
     const {checkOutDate,setCheckOutDate} = useContext(ContextData)
     const {fData,setFData} = useContext(ContextData)
     const [range, setRange] = useState(6200)
+    const uniqueAmenities = [
+      ...new Set(hotelData.flatMap(hotel => hotel.amenities))
+    ];
+    const [amentites, setAmentites] = useState([])  
+    
+    const navigate=useNavigate()
   return (
   <>
   <div className='hero-filter'>
@@ -35,24 +42,39 @@ const Hotel = () => {
       <span class="filter-section__label">Amenities</span>
 
       <div class="amenities-list">
-        <label class="chip">
-          <input type="checkbox" ></input>
-          <span class="chip__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8.5c5-5 11-5 16 0"/><path d="M7 12c3.5-3.5 6.5-3.5 10 0"/><path d="M10 15.5c1.5-1.5 2.5-1.5 4 0"/><circle cx="12" cy="19" r="1" fill="currentColor" stroke="none"/></svg></span>
-          <span class="chip__label">Wifi</span>
-          <span class="chip__check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
-        </label>
+          {uniqueAmenities.map((e)=>{
+            return <>
+            <label class="chip">
+              <input type="checkbox" value={e} onChange={(ele)=>{
+                console.log(amentites);
+                if(ele.target.checked===true){
+                  const newAmmnt=[...amentites]
+                  newAmmnt.push(e)
+                  setAmentites(newAmmnt)
+                }else{
+                  const newAmmnt=[...amentites]
+                  const updateAmmt=newAmmnt.filter(el=> el !== e)
+                  setAmentites(updateAmmt)
+                }
+              }} ></input>
+                <span class="chip__label">{e}</span>
+              <span class="chip__check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+            </label>
+            </>
+          })}
+        
       </div>
     </div>
   </div>
     </div>
     <div className='hotel-main'>
       {fData.map((e)=>{
-        if((e.availableFrom<=checkInDate && e.availableTo>=checkInDate && checkInDate<checkOutDate) && (e.availableTo>=checkOutDate && e.availableFrom<=checkOutDate && checkOutDate>checkInDate) && e.price<=range){
+        if((e.availableFrom<=checkInDate && e.availableTo>=checkInDate && checkInDate<checkOutDate) && (e.availableTo>=checkOutDate && e.availableFrom<=checkOutDate && checkOutDate>checkInDate) && e.price<=range && amentites.every(el=> e.amenities.includes(el))){
           return <>
               <div className="hotel-card">
                 <div className="hotel-card__media">
                   <img
-                  src={e.image}
+                  src={e.image[0]}
                   alt={e.name}
                   />
           <div className="rating-pill">
@@ -98,7 +120,9 @@ const Hotel = () => {
               <span className="price__amount">₹{e.price}</span>
               <span className="price__unit">/ night</span>
             </div>
-            <button className="book-btn" type="button">View Details</button>
+            <button className="book-btn" type="button" onClick={()=>{
+              navigate(`/details/${e.id}`)
+            }} >View Details</button>
           </div>
  
         </div>

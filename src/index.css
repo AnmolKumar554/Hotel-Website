@@ -639,7 +639,7 @@
     border:none;
     cursor:pointer;
     padding:11px 26px;
-    border-radius:100px;
+    border-radius:6px;
     background:var(--ink);
     color:var(--paper);
     font-family:'Inter', sans-serif;
@@ -648,7 +648,7 @@
     letter-spacing:0.01em;
     transition:transform 0.2s ease, background 0.2s ease;
   }
-  .book-btn:hover{ background:#1c1d21; transform:translateY(-2px); }
+  .book-btn:hover{  transform:translateY(-2px); background-color:#7CC6FE;color: var(--ink); }
   .book-btn:active{ transform:translateY(0); }
   .book-btn:focus-visible{ outline:2px solid var(--mint); outline-offset:3px; }
  

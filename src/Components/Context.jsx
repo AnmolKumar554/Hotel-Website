@@ -8,7 +8,7 @@ const Context = (props) => {
 
 
   const [hotelData, setHotelData] = useState([
-{
+  {
     id: 1,
     name: "Hotel Maurya",
     address: "Patna, Bihar",
@@ -18,14 +18,54 @@ const Context = (props) => {
     price: 1800,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.4,
     reviews: 172,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rohan Sharma",
+        rating: 4.4,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 2,
+        name: "Sneha Reddy",
+        rating: 4.1,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 3,
+        name: "Manish Yadav",
+        rating: 4.6,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 4,
+        name: "Anjali Saxena",
+        rating: 4.3,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      }
+    ]
   },
-{
+  {
     id: 2,
     name: "The Grand Patna",
     address: "Patna, Bihar",
@@ -35,14 +75,54 @@ const Context = (props) => {
     price: 2400,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 3.8,
     reviews: 309,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Vikram Rao",
+        rating: 3.8,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 2,
+        name: "Divya Menon",
+        rating: 3.5,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      },
+      {
+        id: 3,
+        name: "Aditya Bhatt",
+        rating: 4,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 4,
+        name: "Isha Chopra",
+        rating: 3.7,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      }
+    ]
   },
-{
+  {
     id: 3,
     name: "Hotel Ganga View",
     address: "Patna, Bihar",
@@ -52,14 +132,54 @@ const Context = (props) => {
     price: 2100,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 4.5,
     reviews: 446,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Arjun Nair",
+        rating: 4.5,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 2,
+        name: "Ritu Chawla",
+        rating: 4.2,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 3,
+        name: "Deepak Kumar",
+        rating: 4.7,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 4,
+        name: "Lakshmi Menon",
+        rating: 4.4,
+        comment: "Loved the location and the amenities were exactly as described."
+      }
+    ]
   },
-{
+  {
     id: 4,
     name: "Patliputra Residency",
     address: "Patna, Bihar",
@@ -69,14 +189,54 @@ const Context = (props) => {
     price: 2600,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 3.9,
     reviews: 583,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Sanjay Mehta",
+        rating: 3.9,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 2,
+        name: "Nisha Agarwal",
+        rating: 3.6,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 3,
+        name: "Nikhil Bansal",
+        rating: 4.1,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 4,
+        name: "Neha Gupta",
+        rating: 3.8,
+        comment: "Average experience, food options were limited near the property."
+      }
+    ]
   },
-{
+  {
     id: 5,
     name: "Hotel Chanakya",
     address: "Patna, Bihar",
@@ -86,14 +246,54 @@ const Context = (props) => {
     price: 2900,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.6,
     reviews: 720,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Suresh Pillai",
+        rating: 4.6,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 2,
+        name: "Shreya Bose",
+        rating: 4.3,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 3,
+        name: "Rohan Sharma",
+        rating: 4.8,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 4,
+        name: "Sneha Reddy",
+        rating: 4.5,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      }
+    ]
   },
-{
+  {
     id: 6,
     name: "City View Inn",
     address: "Patna, Bihar",
@@ -103,14 +303,54 @@ const Context = (props) => {
     price: 1500,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
-    rating: 4.0,
+    image: [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
+    rating: 4,
     reviews: 857,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Vivek Choudhary",
+        rating: 4,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      },
+      {
+        id: 2,
+        name: "Tanvi Shah",
+        rating: 3.7,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 3,
+        name: "Vikram Rao",
+        rating: 4.2,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 4,
+        name: "Divya Menon",
+        rating: 3.9,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      }
+    ]
   },
-{
+  {
     id: 7,
     name: "Royal Heritage",
     address: "Patna, Bihar",
@@ -120,14 +360,54 @@ const Context = (props) => {
     price: 3200,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.7,
     reviews: 994,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rajesh Tiwari",
+        rating: 4.7,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 2,
+        name: "Priya Verma",
+        rating: 4.4,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 3,
+        name: "Arjun Nair",
+        rating: 4.9,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 4,
+        name: "Ritu Chawla",
+        rating: 4.6,
+        comment: "The view from the room was stunning, highly recommend this place."
+      }
+    ]
   },
-{
+  {
     id: 8,
     name: "Hotel Sunshine",
     address: "Patna, Bihar",
@@ -137,14 +417,54 @@ const Context = (props) => {
     price: 1700,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.1,
     reviews: 1131,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Harish Pandey",
+        rating: 4.1,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 2,
+        name: "Ananya Iyer",
+        rating: 3.8,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 3,
+        name: "Sanjay Mehta",
+        rating: 4.3,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 4,
+        name: "Nisha Agarwal",
+        rating: 4,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      }
+    ]
   },
-{
+  {
     id: 9,
     name: "The Comfort Stay",
     address: "Patna, Bihar",
@@ -154,14 +474,54 @@ const Context = (props) => {
     price: 1900,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 4.8,
     reviews: 1268,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Amit Singh",
+        rating: 4.8,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 2,
+        name: "Pooja Joshi",
+        rating: 4.5,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 3,
+        name: "Suresh Pillai",
+        rating: 5,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 4,
+        name: "Shreya Bose",
+        rating: 4.7,
+        comment: "Perfect for a short trip, everything was well maintained."
+      }
+    ]
   },
-{
+  {
     id: 10,
     name: "Hotel Bodhi",
     address: "Patna, Bihar",
@@ -171,14 +531,54 @@ const Context = (props) => {
     price: 2300,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.2,
     reviews: 1405,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Karan Malhotra",
+        rating: 4.2,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 2,
+        name: "Kavita Desai",
+        rating: 3.9,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 3,
+        name: "Vivek Choudhary",
+        rating: 4.4,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 4,
+        name: "Tanvi Shah",
+        rating: 4.1,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      }
+    ]
   },
-{
+  {
     id: 11,
     name: "Golden Temple Residency",
     address: "Amritsar, Punjab",
@@ -188,14 +588,54 @@ const Context = (props) => {
     price: 2200,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.9,
     reviews: 92,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rahul Kapoor",
+        rating: 4.9,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 2,
+        name: "Meera Krishnan",
+        rating: 4.6,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 3,
+        name: "Rajesh Tiwari",
+        rating: 5,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 4,
+        name: "Priya Verma",
+        rating: 4.8,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      }
+    ]
   },
-{
+  {
     id: 12,
     name: "Hotel Harman",
     address: "Amritsar, Punjab",
@@ -205,14 +645,54 @@ const Context = (props) => {
     price: 1800,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 4.3,
     reviews: 229,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Manish Yadav",
+        rating: 4.3,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 2,
+        name: "Anjali Saxena",
+        rating: 4,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 3,
+        name: "Harish Pandey",
+        rating: 4.5,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 4,
+        name: "Ananya Iyer",
+        rating: 4.2,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      }
+    ]
   },
-{
+  {
     id: 13,
     name: "Punjab Palace",
     address: "Amritsar, Punjab",
@@ -222,14 +702,54 @@ const Context = (props) => {
     price: 2700,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 3.7,
     reviews: 366,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Aditya Bhatt",
+        rating: 3.7,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 2,
+        name: "Isha Chopra",
+        rating: 3.4,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      },
+      {
+        id: 3,
+        name: "Amit Singh",
+        rating: 3.9,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 4,
+        name: "Pooja Joshi",
+        rating: 3.6,
+        comment: "Good location but service was a little slow during checkout."
+      }
+    ]
   },
-{
+  {
     id: 14,
     name: "The Amritsar Grand",
     address: "Amritsar, Punjab",
@@ -239,14 +759,54 @@ const Context = (props) => {
     price: 3500,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.4,
     reviews: 503,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Deepak Kumar",
+        rating: 4.4,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 2,
+        name: "Lakshmi Menon",
+        rating: 4.1,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 3,
+        name: "Karan Malhotra",
+        rating: 4.6,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 4,
+        name: "Kavita Desai",
+        rating: 4.3,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      }
+    ]
   },
-{
+  {
     id: 15,
     name: "Hotel Golden View",
     address: "Amritsar, Punjab",
@@ -256,14 +816,54 @@ const Context = (props) => {
     price: 2400,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 3.8,
     reviews: 640,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Nikhil Bansal",
+        rating: 3.8,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      },
+      {
+        id: 2,
+        name: "Neha Gupta",
+        rating: 3.5,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 3,
+        name: "Rahul Kapoor",
+        rating: 4,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 4,
+        name: "Meera Krishnan",
+        rating: 3.7,
+        comment: "Room was fine but the AC was noisy at night."
+      }
+    ]
   },
-{
+  {
     id: 16,
     name: "Heritage Inn",
     address: "Amritsar, Punjab",
@@ -273,14 +873,54 @@ const Context = (props) => {
     price: 2100,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.5,
     reviews: 777,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rohan Sharma",
+        rating: 4.5,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 2,
+        name: "Sneha Reddy",
+        rating: 4.2,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 3,
+        name: "Manish Yadav",
+        rating: 4.7,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 4,
+        name: "Anjali Saxena",
+        rating: 4.4,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      }
+    ]
   },
-{
+  {
     id: 17,
     name: "Royal Punjab Hotel",
     address: "Amritsar, Punjab",
@@ -290,14 +930,54 @@ const Context = (props) => {
     price: 3100,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 3.9,
     reviews: 914,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Vikram Rao",
+        rating: 3.9,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 2,
+        name: "Divya Menon",
+        rating: 3.6,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 3,
+        name: "Aditya Bhatt",
+        rating: 4.1,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 4,
+        name: "Isha Chopra",
+        rating: 3.8,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      }
+    ]
   },
-{
+  {
     id: 18,
     name: "City Palace Amritsar",
     address: "Amritsar, Punjab",
@@ -307,14 +987,54 @@ const Context = (props) => {
     price: 1600,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 4.6,
     reviews: 1051,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Arjun Nair",
+        rating: 4.6,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 2,
+        name: "Ritu Chawla",
+        rating: 4.3,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 3,
+        name: "Deepak Kumar",
+        rating: 4.8,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 4,
+        name: "Lakshmi Menon",
+        rating: 4.5,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      }
+    ]
   },
-{
+  {
     id: 19,
     name: "Silver Leaf Hotel",
     address: "Amritsar, Punjab",
@@ -324,14 +1044,54 @@ const Context = (props) => {
     price: 2000,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
-    rating: 4.0,
+    image: [
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
+    rating: 4,
     reviews: 1188,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Sanjay Mehta",
+        rating: 4,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 2,
+        name: "Nisha Agarwal",
+        rating: 3.7,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 3,
+        name: "Nikhil Bansal",
+        rating: 4.2,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      },
+      {
+        id: 4,
+        name: "Neha Gupta",
+        rating: 3.9,
+        comment: "Good location but service was a little slow during checkout."
+      }
+    ]
   },
-{
+  {
     id: 20,
     name: "Hotel Golden Crown",
     address: "Amritsar, Punjab",
@@ -341,14 +1101,54 @@ const Context = (props) => {
     price: 2800,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.7,
     reviews: 1325,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Suresh Pillai",
+        rating: 4.7,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 2,
+        name: "Shreya Bose",
+        rating: 4.4,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 3,
+        name: "Rohan Sharma",
+        rating: 4.9,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 4,
+        name: "Sneha Reddy",
+        rating: 4.6,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      }
+    ]
   },
-{
+  {
     id: 21,
     name: "The Pink City Hotel",
     address: "Jaipur, Rajasthan",
@@ -358,14 +1158,54 @@ const Context = (props) => {
     price: 2300,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 4.1,
     reviews: 1462,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Vivek Choudhary",
+        rating: 4.1,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 2,
+        name: "Tanvi Shah",
+        rating: 3.8,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 3,
+        name: "Vikram Rao",
+        rating: 4.3,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 4,
+        name: "Divya Menon",
+        rating: 4,
+        comment: "Room was fine but the AC was noisy at night."
+      }
+    ]
   },
-{
+  {
     id: 22,
     name: "Rajputana Residency",
     address: "Jaipur, Rajasthan",
@@ -375,14 +1215,54 @@ const Context = (props) => {
     price: 2900,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.8,
     reviews: 149,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rajesh Tiwari",
+        rating: 4.8,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 2,
+        name: "Priya Verma",
+        rating: 4.5,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 3,
+        name: "Arjun Nair",
+        rating: 5,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 4,
+        name: "Ritu Chawla",
+        rating: 4.7,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      }
+    ]
   },
-{
+  {
     id: 23,
     name: "Amber Palace Inn",
     address: "Jaipur, Rajasthan",
@@ -392,14 +1272,54 @@ const Context = (props) => {
     price: 2100,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.2,
     reviews: 286,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Harish Pandey",
+        rating: 4.2,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 2,
+        name: "Ananya Iyer",
+        rating: 3.9,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 3,
+        name: "Sanjay Mehta",
+        rating: 4.4,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 4,
+        name: "Nisha Agarwal",
+        rating: 4.1,
+        comment: "Loved the location and the amenities were exactly as described."
+      }
+    ]
   },
-{
+  {
     id: 24,
     name: "Pink Heritage",
     address: "Jaipur, Rajasthan",
@@ -409,14 +1329,54 @@ const Context = (props) => {
     price: 2600,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 4.9,
     reviews: 423,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Amit Singh",
+        rating: 4.9,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 2,
+        name: "Pooja Joshi",
+        rating: 4.6,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 3,
+        name: "Suresh Pillai",
+        rating: 5,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 4,
+        name: "Shreya Bose",
+        rating: 4.8,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      }
+    ]
   },
-{
+  {
     id: 25,
     name: "Royal Rajput Hotel",
     address: "Jaipur, Rajasthan",
@@ -426,14 +1386,54 @@ const Context = (props) => {
     price: 3200,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.3,
     reviews: 560,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Karan Malhotra",
+        rating: 4.3,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 2,
+        name: "Kavita Desai",
+        rating: 4,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 3,
+        name: "Vivek Choudhary",
+        rating: 4.5,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 4,
+        name: "Tanvi Shah",
+        rating: 4.2,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      }
+    ]
   },
-{
+  {
     id: 26,
     name: "Hotel Maharaja",
     address: "Jaipur, Rajasthan",
@@ -443,14 +1443,54 @@ const Context = (props) => {
     price: 1900,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 3.7,
     reviews: 697,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rahul Kapoor",
+        rating: 3.7,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      },
+      {
+        id: 2,
+        name: "Meera Krishnan",
+        rating: 3.4,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 3,
+        name: "Rajesh Tiwari",
+        rating: 3.9,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 4,
+        name: "Priya Verma",
+        rating: 3.6,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      }
+    ]
   },
-{
+  {
     id: 27,
     name: "Desert Rose Hotel",
     address: "Jaipur, Rajasthan",
@@ -460,14 +1500,54 @@ const Context = (props) => {
     price: 2500,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 4.4,
     reviews: 834,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Manish Yadav",
+        rating: 4.4,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 2,
+        name: "Anjali Saxena",
+        rating: 4.1,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 3,
+        name: "Harish Pandey",
+        rating: 4.6,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 4,
+        name: "Ananya Iyer",
+        rating: 4.3,
+        comment: "The view from the room was stunning, highly recommend this place."
+      }
+    ]
   },
-{
+  {
     id: 28,
     name: "Raj Palace Stay",
     address: "Jaipur, Rajasthan",
@@ -477,14 +1557,54 @@ const Context = (props) => {
     price: 1800,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 3.8,
     reviews: 971,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Aditya Bhatt",
+        rating: 3.8,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 2,
+        name: "Isha Chopra",
+        rating: 3.5,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 3,
+        name: "Amit Singh",
+        rating: 4,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 4,
+        name: "Pooja Joshi",
+        rating: 3.7,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      }
+    ]
   },
-{
+  {
     id: 29,
     name: "The Jaipur Grand",
     address: "Jaipur, Rajasthan",
@@ -494,14 +1614,54 @@ const Context = (props) => {
     price: 3400,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.5,
     reviews: 1108,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Deepak Kumar",
+        rating: 4.5,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 2,
+        name: "Lakshmi Menon",
+        rating: 4.2,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 3,
+        name: "Karan Malhotra",
+        rating: 4.7,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 4,
+        name: "Kavita Desai",
+        rating: 4.4,
+        comment: "Perfect for a short trip, everything was well maintained."
+      }
+    ]
   },
-{
+  {
     id: 30,
     name: "Heritage Haveli Hotel",
     address: "Jaipur, Rajasthan",
@@ -511,14 +1671,54 @@ const Context = (props) => {
     price: 2200,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 3.9,
     reviews: 1245,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Nikhil Bansal",
+        rating: 3.9,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 2,
+        name: "Neha Gupta",
+        rating: 3.6,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 3,
+        name: "Rahul Kapoor",
+        rating: 4.1,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      },
+      {
+        id: 4,
+        name: "Meera Krishnan",
+        rating: 3.8,
+        comment: "Average experience, food options were limited near the property."
+      }
+    ]
   },
-{
+  {
     id: 31,
     name: "City Lights Hotel",
     address: "Delhi, India",
@@ -528,14 +1728,54 @@ const Context = (props) => {
     price: 3800,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.6,
     reviews: 1382,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rohan Sharma",
+        rating: 4.6,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 2,
+        name: "Sneha Reddy",
+        rating: 4.3,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 3,
+        name: "Manish Yadav",
+        rating: 4.8,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 4,
+        name: "Anjali Saxena",
+        rating: 4.5,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      }
+    ]
   },
-{
+  {
     id: 32,
     name: "Capital Residency",
     address: "Delhi, India",
@@ -545,14 +1785,54 @@ const Context = (props) => {
     price: 2600,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
-    rating: 4.0,
+    image: [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
+    rating: 4,
     reviews: 69,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Vikram Rao",
+        rating: 4,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 2,
+        name: "Divya Menon",
+        rating: 3.7,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      },
+      {
+        id: 3,
+        name: "Aditya Bhatt",
+        rating: 4.2,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 4,
+        name: "Isha Chopra",
+        rating: 3.9,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      }
+    ]
   },
-{
+  {
     id: 33,
     name: "Imperial Stay",
     address: "Delhi, India",
@@ -562,14 +1842,54 @@ const Context = (props) => {
     price: 4200,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 4.7,
     reviews: 206,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Arjun Nair",
+        rating: 4.7,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 2,
+        name: "Ritu Chawla",
+        rating: 4.4,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 3,
+        name: "Deepak Kumar",
+        rating: 4.9,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 4,
+        name: "Lakshmi Menon",
+        rating: 4.6,
+        comment: "Loved the location and the amenities were exactly as described."
+      }
+    ]
   },
-{
+  {
     id: 34,
     name: "Hotel Ashoka",
     address: "Delhi, India",
@@ -579,14 +1899,54 @@ const Context = (props) => {
     price: 1900,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.1,
     reviews: 343,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Sanjay Mehta",
+        rating: 4.1,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 2,
+        name: "Nisha Agarwal",
+        rating: 3.8,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 3,
+        name: "Nikhil Bansal",
+        rating: 4.3,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 4,
+        name: "Neha Gupta",
+        rating: 4,
+        comment: "Average experience, food options were limited near the property."
+      }
+    ]
   },
-{
+  {
     id: 35,
     name: "Metro View Hotel",
     address: "Delhi, India",
@@ -596,14 +1956,54 @@ const Context = (props) => {
     price: 2800,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.8,
     reviews: 480,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Suresh Pillai",
+        rating: 4.8,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 2,
+        name: "Shreya Bose",
+        rating: 4.5,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 3,
+        name: "Rohan Sharma",
+        rating: 5,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 4,
+        name: "Sneha Reddy",
+        rating: 4.7,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      }
+    ]
   },
-{
+  {
     id: 36,
     name: "The Royal Capital",
     address: "Delhi, India",
@@ -613,14 +2013,54 @@ const Context = (props) => {
     price: 4500,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 4.2,
     reviews: 617,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Vivek Choudhary",
+        rating: 4.2,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 2,
+        name: "Tanvi Shah",
+        rating: 3.9,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 3,
+        name: "Vikram Rao",
+        rating: 4.4,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 4,
+        name: "Divya Menon",
+        rating: 4.1,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      }
+    ]
   },
-{
+  {
     id: 37,
     name: "Green Park Inn",
     address: "Delhi, India",
@@ -630,14 +2070,54 @@ const Context = (props) => {
     price: 3100,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.9,
     reviews: 754,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rajesh Tiwari",
+        rating: 4.9,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 2,
+        name: "Priya Verma",
+        rating: 4.6,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 3,
+        name: "Arjun Nair",
+        rating: 5,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 4,
+        name: "Ritu Chawla",
+        rating: 4.8,
+        comment: "The view from the room was stunning, highly recommend this place."
+      }
+    ]
   },
-{
+  {
     id: 38,
     name: "Old Delhi Heritage",
     address: "Delhi, India",
@@ -647,14 +2127,54 @@ const Context = (props) => {
     price: 2400,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.3,
     reviews: 891,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Harish Pandey",
+        rating: 4.3,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 2,
+        name: "Ananya Iyer",
+        rating: 4,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 3,
+        name: "Sanjay Mehta",
+        rating: 4.5,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 4,
+        name: "Nisha Agarwal",
+        rating: 4.2,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      }
+    ]
   },
-{
+  {
     id: 39,
     name: "Hotel Central Park",
     address: "Delhi, India",
@@ -664,14 +2184,54 @@ const Context = (props) => {
     price: 2900,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 3.7,
     reviews: 1028,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Amit Singh",
+        rating: 3.7,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 2,
+        name: "Pooja Joshi",
+        rating: 3.4,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 3,
+        name: "Suresh Pillai",
+        rating: 3.9,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      },
+      {
+        id: 4,
+        name: "Shreya Bose",
+        rating: 3.6,
+        comment: "Good location but service was a little slow during checkout."
+      }
+    ]
   },
-{
+  {
     id: 40,
     name: "Skyline Delhi",
     address: "Delhi, India",
@@ -681,14 +2241,54 @@ const Context = (props) => {
     price: 2700,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.4,
     reviews: 1165,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Karan Malhotra",
+        rating: 4.4,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 2,
+        name: "Kavita Desai",
+        rating: 4.1,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 3,
+        name: "Vivek Choudhary",
+        rating: 4.6,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 4,
+        name: "Tanvi Shah",
+        rating: 4.3,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      }
+    ]
   },
-{
+  {
     id: 41,
     name: "Marine View Hotel",
     address: "Mumbai, Maharashtra",
@@ -698,14 +2298,54 @@ const Context = (props) => {
     price: 5200,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 3.8,
     reviews: 1302,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rahul Kapoor",
+        rating: 3.8,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 2,
+        name: "Meera Krishnan",
+        rating: 3.5,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 3,
+        name: "Rajesh Tiwari",
+        rating: 4,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 4,
+        name: "Priya Verma",
+        rating: 3.7,
+        comment: "Room was fine but the AC was noisy at night."
+      }
+    ]
   },
-{
+  {
     id: 42,
     name: "Gateway Residency",
     address: "Mumbai, Maharashtra",
@@ -715,14 +2355,54 @@ const Context = (props) => {
     price: 4800,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 4.5,
     reviews: 1439,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Manish Yadav",
+        rating: 4.5,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 2,
+        name: "Anjali Saxena",
+        rating: 4.2,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 3,
+        name: "Harish Pandey",
+        rating: 4.7,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 4,
+        name: "Ananya Iyer",
+        rating: 4.4,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      }
+    ]
   },
-{
+  {
     id: 43,
     name: "Mumbai Central Hotel",
     address: "Mumbai, Maharashtra",
@@ -732,14 +2412,54 @@ const Context = (props) => {
     price: 3600,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 3.9,
     reviews: 126,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Aditya Bhatt",
+        rating: 3.9,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 2,
+        name: "Isha Chopra",
+        rating: 3.6,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      },
+      {
+        id: 3,
+        name: "Amit Singh",
+        rating: 4.1,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 4,
+        name: "Pooja Joshi",
+        rating: 3.8,
+        comment: "Good location but service was a little slow during checkout."
+      }
+    ]
   },
-{
+  {
     id: 44,
     name: "Palm Grove Inn",
     address: "Mumbai, Maharashtra",
@@ -749,14 +2469,54 @@ const Context = (props) => {
     price: 3900,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.6,
     reviews: 263,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Deepak Kumar",
+        rating: 4.6,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 2,
+        name: "Lakshmi Menon",
+        rating: 4.3,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 3,
+        name: "Karan Malhotra",
+        rating: 4.8,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 4,
+        name: "Kavita Desai",
+        rating: 4.5,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      }
+    ]
   },
-{
+  {
     id: 45,
     name: "Royal Marine Hotel",
     address: "Mumbai, Maharashtra",
@@ -766,14 +2526,54 @@ const Context = (props) => {
     price: 6200,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
-    rating: 4.0,
+    image: [
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
+    rating: 4,
     reviews: 400,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Nikhil Bansal",
+        rating: 4,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      },
+      {
+        id: 2,
+        name: "Neha Gupta",
+        rating: 3.7,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 3,
+        name: "Rahul Kapoor",
+        rating: 4.2,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 4,
+        name: "Meera Krishnan",
+        rating: 3.9,
+        comment: "Room was fine but the AC was noisy at night."
+      }
+    ]
   },
-{
+  {
     id: 46,
     name: "Harbour View Stay",
     address: "Mumbai, Maharashtra",
@@ -783,14 +2583,54 @@ const Context = (props) => {
     price: 4300,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.7,
     reviews: 537,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rohan Sharma",
+        rating: 4.7,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 2,
+        name: "Sneha Reddy",
+        rating: 4.4,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 3,
+        name: "Manish Yadav",
+        rating: 4.9,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 4,
+        name: "Anjali Saxena",
+        rating: 4.6,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      }
+    ]
   },
-{
+  {
     id: 47,
     name: "Metro Mumbai Hotel",
     address: "Mumbai, Maharashtra",
@@ -800,14 +2640,54 @@ const Context = (props) => {
     price: 4100,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.1,
     reviews: 674,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Vikram Rao",
+        rating: 4.1,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 2,
+        name: "Divya Menon",
+        rating: 3.8,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 3,
+        name: "Aditya Bhatt",
+        rating: 4.3,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 4,
+        name: "Isha Chopra",
+        rating: 4,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      }
+    ]
   },
-{
+  {
     id: 48,
     name: "The Coastal Palace",
     address: "Mumbai, Maharashtra",
@@ -817,14 +2697,54 @@ const Context = (props) => {
     price: 5500,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 4.8,
     reviews: 811,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Arjun Nair",
+        rating: 4.8,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 2,
+        name: "Ritu Chawla",
+        rating: 4.5,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 3,
+        name: "Deepak Kumar",
+        rating: 5,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 4,
+        name: "Lakshmi Menon",
+        rating: 4.7,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      }
+    ]
   },
-{
+  {
     id: 49,
     name: "Urban Pearl Hotel",
     address: "Mumbai, Maharashtra",
@@ -834,14 +2754,54 @@ const Context = (props) => {
     price: 4700,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.2,
     reviews: 948,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Sanjay Mehta",
+        rating: 4.2,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 2,
+        name: "Nisha Agarwal",
+        rating: 3.9,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 3,
+        name: "Nikhil Bansal",
+        rating: 4.4,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 4,
+        name: "Neha Gupta",
+        rating: 4.1,
+        comment: "Perfect for a short trip, everything was well maintained."
+      }
+    ]
   },
-{
+  {
     id: 50,
     name: "Western Heights",
     address: "Mumbai, Maharashtra",
@@ -851,12 +2811,52 @@ const Context = (props) => {
     price: 3200,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.9,
     reviews: 1085,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Suresh Pillai",
+        rating: 4.9,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 2,
+        name: "Shreya Bose",
+        rating: 4.6,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 3,
+        name: "Rohan Sharma",
+        rating: 5,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 4,
+        name: "Sneha Reddy",
+        rating: 4.8,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      }
+    ]
   },
   {
     id: 51,
@@ -868,14 +2868,54 @@ const Context = (props) => {
     price: 3300,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 4.3,
     reviews: 1222,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Vivek Choudhary",
+        rating: 4.3,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 2,
+        name: "Tanvi Shah",
+        rating: 4,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 3,
+        name: "Vikram Rao",
+        rating: 4.5,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 4,
+        name: "Divya Menon",
+        rating: 4.2,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      }
+    ]
   },
-{
+  {
     id: 52,
     name: "Garden City Inn",
     address: "Bengaluru, Karnataka",
@@ -885,14 +2925,54 @@ const Context = (props) => {
     price: 3900,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 3.7,
     reviews: 1359,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rajesh Tiwari",
+        rating: 3.7,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 2,
+        name: "Priya Verma",
+        rating: 3.4,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      },
+      {
+        id: 3,
+        name: "Arjun Nair",
+        rating: 3.9,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 4,
+        name: "Ritu Chawla",
+        rating: 3.6,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      }
+    ]
   },
-{
+  {
     id: 53,
     name: "Silicon Valley Stay",
     address: "Bengaluru, Karnataka",
@@ -902,14 +2982,54 @@ const Context = (props) => {
     price: 3600,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.4,
     reviews: 46,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Harish Pandey",
+        rating: 4.4,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 2,
+        name: "Ananya Iyer",
+        rating: 4.1,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 3,
+        name: "Sanjay Mehta",
+        rating: 4.6,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 4,
+        name: "Nisha Agarwal",
+        rating: 4.3,
+        comment: "Loved the location and the amenities were exactly as described."
+      }
+    ]
   },
-{
+  {
     id: 54,
     name: "Royal Garden Hotel",
     address: "Bengaluru, Karnataka",
@@ -919,14 +3039,54 @@ const Context = (props) => {
     price: 2700,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 3.8,
     reviews: 183,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Amit Singh",
+        rating: 3.8,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 2,
+        name: "Pooja Joshi",
+        rating: 3.5,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 3,
+        name: "Suresh Pillai",
+        rating: 4,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 4,
+        name: "Shreya Bose",
+        rating: 3.7,
+        comment: "Average experience, food options were limited near the property."
+      }
+    ]
   },
-{
+  {
     id: 55,
     name: "The Bangalore Grand",
     address: "Bengaluru, Karnataka",
@@ -936,14 +3096,54 @@ const Context = (props) => {
     price: 4400,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.5,
     reviews: 320,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Karan Malhotra",
+        rating: 4.5,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 2,
+        name: "Kavita Desai",
+        rating: 4.2,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 3,
+        name: "Vivek Choudhary",
+        rating: 4.7,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 4,
+        name: "Tanvi Shah",
+        rating: 4.4,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      }
+    ]
   },
-{
+  {
     id: 56,
     name: "Tech Park Residency",
     address: "Bengaluru, Karnataka",
@@ -953,14 +3153,54 @@ const Context = (props) => {
     price: 2300,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 3.9,
     reviews: 457,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rahul Kapoor",
+        rating: 3.9,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      },
+      {
+        id: 2,
+        name: "Meera Krishnan",
+        rating: 3.6,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 3,
+        name: "Rajesh Tiwari",
+        rating: 4.1,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 4,
+        name: "Priya Verma",
+        rating: 3.8,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      }
+    ]
   },
-{
+  {
     id: 57,
     name: "Lake View Bengaluru",
     address: "Bengaluru, Karnataka",
@@ -970,14 +3210,54 @@ const Context = (props) => {
     price: 3000,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 4.6,
     reviews: 594,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Manish Yadav",
+        rating: 4.6,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 2,
+        name: "Anjali Saxena",
+        rating: 4.3,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 3,
+        name: "Harish Pandey",
+        rating: 4.8,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 4,
+        name: "Ananya Iyer",
+        rating: 4.5,
+        comment: "The view from the room was stunning, highly recommend this place."
+      }
+    ]
   },
-{
+  {
     id: 58,
     name: "Urban Nest Hotel",
     address: "Bengaluru, Karnataka",
@@ -987,14 +3267,54 @@ const Context = (props) => {
     price: 2800,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
-    rating: 4.0,
+    image: [
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
+    rating: 4,
     reviews: 731,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Aditya Bhatt",
+        rating: 4,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 2,
+        name: "Isha Chopra",
+        rating: 3.7,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 3,
+        name: "Amit Singh",
+        rating: 4.2,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 4,
+        name: "Pooja Joshi",
+        rating: 3.9,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      }
+    ]
   },
-{
+  {
     id: 59,
     name: "Cedar Park Inn",
     address: "Bengaluru, Karnataka",
@@ -1004,14 +3324,54 @@ const Context = (props) => {
     price: 2500,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.7,
     reviews: 868,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Deepak Kumar",
+        rating: 4.7,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 2,
+        name: "Lakshmi Menon",
+        rating: 4.4,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 3,
+        name: "Karan Malhotra",
+        rating: 4.9,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 4,
+        name: "Kavita Desai",
+        rating: 4.6,
+        comment: "Perfect for a short trip, everything was well maintained."
+      }
+    ]
   },
-{
+  {
     id: 60,
     name: "Skyline Bengaluru",
     address: "Bengaluru, Karnataka",
@@ -1021,14 +3381,54 @@ const Context = (props) => {
     price: 3500,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 4.1,
     reviews: 1005,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Nikhil Bansal",
+        rating: 4.1,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 2,
+        name: "Neha Gupta",
+        rating: 3.8,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 3,
+        name: "Rahul Kapoor",
+        rating: 4.3,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      },
+      {
+        id: 4,
+        name: "Meera Krishnan",
+        rating: 4,
+        comment: "Average experience, food options were limited near the property."
+      }
+    ]
   },
-{
+  {
     id: 61,
     name: "Park Street Residency",
     address: "Kolkata, West Bengal",
@@ -1038,14 +3438,54 @@ const Context = (props) => {
     price: 2800,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.8,
     reviews: 1142,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rohan Sharma",
+        rating: 4.8,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 2,
+        name: "Sneha Reddy",
+        rating: 4.5,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 3,
+        name: "Manish Yadav",
+        rating: 5,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 4,
+        name: "Anjali Saxena",
+        rating: 4.7,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      }
+    ]
   },
-{
+  {
     id: 62,
     name: "Victoria Grand Hotel",
     address: "Kolkata, West Bengal",
@@ -1055,14 +3495,54 @@ const Context = (props) => {
     price: 3500,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.2,
     reviews: 1279,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Vikram Rao",
+        rating: 4.2,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 2,
+        name: "Divya Menon",
+        rating: 3.9,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 3,
+        name: "Aditya Bhatt",
+        rating: 4.4,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 4,
+        name: "Isha Chopra",
+        rating: 4.1,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      }
+    ]
   },
-{
+  {
     id: 63,
     name: "Hooghly View Inn",
     address: "Kolkata, West Bengal",
@@ -1072,14 +3552,54 @@ const Context = (props) => {
     price: 2400,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 4.9,
     reviews: 1416,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Arjun Nair",
+        rating: 4.9,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 2,
+        name: "Ritu Chawla",
+        rating: 4.6,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 3,
+        name: "Deepak Kumar",
+        rating: 5,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 4,
+        name: "Lakshmi Menon",
+        rating: 4.8,
+        comment: "Loved the location and the amenities were exactly as described."
+      }
+    ]
   },
-{
+  {
     id: 64,
     name: "City of Joy Hotel",
     address: "Kolkata, West Bengal",
@@ -1089,14 +3609,54 @@ const Context = (props) => {
     price: 3100,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.3,
     reviews: 103,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Sanjay Mehta",
+        rating: 4.3,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 2,
+        name: "Nisha Agarwal",
+        rating: 4,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 3,
+        name: "Nikhil Bansal",
+        rating: 4.5,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 4,
+        name: "Neha Gupta",
+        rating: 4.2,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      }
+    ]
   },
-{
+  {
     id: 65,
     name: "Howrah Palace",
     address: "Kolkata, West Bengal",
@@ -1106,14 +3666,54 @@ const Context = (props) => {
     price: 1900,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 3.7,
     reviews: 240,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Suresh Pillai",
+        rating: 3.7,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      },
+      {
+        id: 2,
+        name: "Shreya Bose",
+        rating: 3.4,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 3,
+        name: "Rohan Sharma",
+        rating: 3.9,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 4,
+        name: "Sneha Reddy",
+        rating: 3.6,
+        comment: "Room was fine but the AC was noisy at night."
+      }
+    ]
   },
-{
+  {
     id: 66,
     name: "Royal Bengal Stay",
     address: "Kolkata, West Bengal",
@@ -1123,14 +3723,54 @@ const Context = (props) => {
     price: 2600,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 4.4,
     reviews: 377,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Vivek Choudhary",
+        rating: 4.4,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 2,
+        name: "Tanvi Shah",
+        rating: 4.1,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 3,
+        name: "Vikram Rao",
+        rating: 4.6,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 4,
+        name: "Divya Menon",
+        rating: 4.3,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      }
+    ]
   },
-{
+  {
     id: 67,
     name: "Lake Town Hotel",
     address: "Kolkata, West Bengal",
@@ -1140,14 +3780,54 @@ const Context = (props) => {
     price: 2200,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 3.8,
     reviews: 514,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rajesh Tiwari",
+        rating: 3.8,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 2,
+        name: "Priya Verma",
+        rating: 3.5,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 3,
+        name: "Arjun Nair",
+        rating: 4,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 4,
+        name: "Ritu Chawla",
+        rating: 3.7,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      }
+    ]
   },
-{
+  {
     id: 68,
     name: "Heritage Kolkata",
     address: "Kolkata, West Bengal",
@@ -1157,14 +3837,54 @@ const Context = (props) => {
     price: 2900,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.5,
     reviews: 651,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Harish Pandey",
+        rating: 4.5,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 2,
+        name: "Ananya Iyer",
+        rating: 4.2,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 3,
+        name: "Sanjay Mehta",
+        rating: 4.7,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 4,
+        name: "Nisha Agarwal",
+        rating: 4.4,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      }
+    ]
   },
-{
+  {
     id: 69,
     name: "Bengal Palace",
     address: "Kolkata, West Bengal",
@@ -1174,14 +3894,54 @@ const Context = (props) => {
     price: 3200,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 3.9,
     reviews: 788,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Amit Singh",
+        rating: 3.9,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 2,
+        name: "Pooja Joshi",
+        rating: 3.6,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 3,
+        name: "Suresh Pillai",
+        rating: 4.1,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      },
+      {
+        id: 4,
+        name: "Shreya Bose",
+        rating: 3.8,
+        comment: "Good location but service was a little slow during checkout."
+      }
+    ]
   },
-{
+  {
     id: 70,
     name: "Eastern Crown Hotel",
     address: "Kolkata, West Bengal",
@@ -1191,14 +3951,54 @@ const Context = (props) => {
     price: 3700,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.6,
     reviews: 925,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Karan Malhotra",
+        rating: 4.6,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 2,
+        name: "Kavita Desai",
+        rating: 4.3,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 3,
+        name: "Vivek Choudhary",
+        rating: 4.8,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 4,
+        name: "Tanvi Shah",
+        rating: 4.5,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      }
+    ]
   },
-{
+  {
     id: 71,
     name: "Hyderabad Palace",
     address: "Hyderabad, Telangana",
@@ -1208,14 +4008,54 @@ const Context = (props) => {
     price: 3200,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
-    rating: 4.0,
+    image: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
+    rating: 4,
     reviews: 1062,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rahul Kapoor",
+        rating: 4,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 2,
+        name: "Meera Krishnan",
+        rating: 3.7,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 3,
+        name: "Rajesh Tiwari",
+        rating: 4.2,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 4,
+        name: "Priya Verma",
+        rating: 3.9,
+        comment: "Room was fine but the AC was noisy at night."
+      }
+    ]
   },
-{
+  {
     id: 72,
     name: "Charminar View Hotel",
     address: "Hyderabad, Telangana",
@@ -1225,14 +4065,54 @@ const Context = (props) => {
     price: 2100,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 4.7,
     reviews: 1199,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Manish Yadav",
+        rating: 4.7,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 2,
+        name: "Anjali Saxena",
+        rating: 4.4,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 3,
+        name: "Harish Pandey",
+        rating: 4.9,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 4,
+        name: "Ananya Iyer",
+        rating: 4.6,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      }
+    ]
   },
-{
+  {
     id: 73,
     name: "Hitech Grand",
     address: "Hyderabad, Telangana",
@@ -1242,14 +4122,54 @@ const Context = (props) => {
     price: 3900,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.1,
     reviews: 1336,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Aditya Bhatt",
+        rating: 4.1,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 2,
+        name: "Isha Chopra",
+        rating: 3.8,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      },
+      {
+        id: 3,
+        name: "Amit Singh",
+        rating: 4.3,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 4,
+        name: "Pooja Joshi",
+        rating: 4,
+        comment: "Good location but service was a little slow during checkout."
+      }
+    ]
   },
-{
+  {
     id: 74,
     name: "Lake View Hyderabad",
     address: "Hyderabad, Telangana",
@@ -1259,14 +4179,54 @@ const Context = (props) => {
     price: 2800,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.8,
     reviews: 1473,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Deepak Kumar",
+        rating: 4.8,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 2,
+        name: "Lakshmi Menon",
+        rating: 4.5,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 3,
+        name: "Karan Malhotra",
+        rating: 5,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 4,
+        name: "Kavita Desai",
+        rating: 4.7,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      }
+    ]
   },
-{
+  {
     id: 75,
     name: "The Deccan Palace",
     address: "Hyderabad, Telangana",
@@ -1276,14 +4236,54 @@ const Context = (props) => {
     price: 3400,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 4.2,
     reviews: 160,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Nikhil Bansal",
+        rating: 4.2,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 2,
+        name: "Neha Gupta",
+        rating: 3.9,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 3,
+        name: "Rahul Kapoor",
+        rating: 4.4,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 4,
+        name: "Meera Krishnan",
+        rating: 4.1,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      }
+    ]
   },
-{
+  {
     id: 76,
     name: "Royal Nizam Hotel",
     address: "Hyderabad, Telangana",
@@ -1293,14 +4293,54 @@ const Context = (props) => {
     price: 2500,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.9,
     reviews: 297,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rohan Sharma",
+        rating: 4.9,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 2,
+        name: "Sneha Reddy",
+        rating: 4.6,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 3,
+        name: "Manish Yadav",
+        rating: 5,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 4,
+        name: "Anjali Saxena",
+        rating: 4.8,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      }
+    ]
   },
-{
+  {
     id: 77,
     name: "Tech City Inn",
     address: "Hyderabad, Telangana",
@@ -1310,14 +4350,54 @@ const Context = (props) => {
     price: 3700,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.3,
     reviews: 434,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Vikram Rao",
+        rating: 4.3,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 2,
+        name: "Divya Menon",
+        rating: 4,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 3,
+        name: "Aditya Bhatt",
+        rating: 4.5,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 4,
+        name: "Isha Chopra",
+        rating: 4.2,
+        comment: "The view from the room was stunning, highly recommend this place."
+      }
+    ]
   },
-{
+  {
     id: 78,
     name: "Pearl City Hotel",
     address: "Hyderabad, Telangana",
@@ -1327,14 +4407,54 @@ const Context = (props) => {
     price: 2200,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 3.7,
     reviews: 571,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Arjun Nair",
+        rating: 3.7,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 2,
+        name: "Ritu Chawla",
+        rating: 3.4,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 3,
+        name: "Deepak Kumar",
+        rating: 3.9,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 4,
+        name: "Lakshmi Menon",
+        rating: 3.6,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      }
+    ]
   },
-{
+  {
     id: 79,
     name: "Golconda Residency",
     address: "Hyderabad, Telangana",
@@ -1344,14 +4464,54 @@ const Context = (props) => {
     price: 2300,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.4,
     reviews: 708,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Sanjay Mehta",
+        rating: 4.4,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 2,
+        name: "Nisha Agarwal",
+        rating: 4.1,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 3,
+        name: "Nikhil Bansal",
+        rating: 4.6,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 4,
+        name: "Neha Gupta",
+        rating: 4.3,
+        comment: "Perfect for a short trip, everything was well maintained."
+      }
+    ]
   },
-{
+  {
     id: 80,
     name: "Deccan Heights",
     address: "Hyderabad, Telangana",
@@ -1361,14 +4521,54 @@ const Context = (props) => {
     price: 3000,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 3.8,
     reviews: 845,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Suresh Pillai",
+        rating: 3.8,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 2,
+        name: "Shreya Bose",
+        rating: 3.5,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 3,
+        name: "Rohan Sharma",
+        rating: 4,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      },
+      {
+        id: 4,
+        name: "Sneha Reddy",
+        rating: 3.7,
+        comment: "Average experience, food options were limited near the property."
+      }
+    ]
   },
-{
+  {
     id: 81,
     name: "Chennai Marina Hotel",
     address: "Chennai, Tamil Nadu",
@@ -1378,14 +4578,54 @@ const Context = (props) => {
     price: 2900,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 4.5,
     reviews: 982,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Vivek Choudhary",
+        rating: 4.5,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 2,
+        name: "Tanvi Shah",
+        rating: 4.2,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 3,
+        name: "Vikram Rao",
+        rating: 4.7,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 4,
+        name: "Divya Menon",
+        rating: 4.4,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      }
+    ]
   },
-{
+  {
     id: 82,
     name: "South Coast Residency",
     address: "Chennai, Tamil Nadu",
@@ -1395,14 +4635,54 @@ const Context = (props) => {
     price: 2500,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 3.9,
     reviews: 1119,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rajesh Tiwari",
+        rating: 3.9,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 2,
+        name: "Priya Verma",
+        rating: 3.6,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      },
+      {
+        id: 3,
+        name: "Arjun Nair",
+        rating: 4.1,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 4,
+        name: "Ritu Chawla",
+        rating: 3.8,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      }
+    ]
   },
-{
+  {
     id: 83,
     name: "Madras Grand Hotel",
     address: "Chennai, Tamil Nadu",
@@ -1412,14 +4692,54 @@ const Context = (props) => {
     price: 3300,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.6,
     reviews: 1256,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Harish Pandey",
+        rating: 4.6,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 2,
+        name: "Ananya Iyer",
+        rating: 4.3,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 3,
+        name: "Sanjay Mehta",
+        rating: 4.8,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 4,
+        name: "Nisha Agarwal",
+        rating: 4.5,
+        comment: "Loved the location and the amenities were exactly as described."
+      }
+    ]
   },
-{
+  {
     id: 84,
     name: "Bay View Chennai",
     address: "Chennai, Tamil Nadu",
@@ -1429,14 +4749,54 @@ const Context = (props) => {
     price: 3800,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
-    rating: 4.0,
+    image: [
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
+    rating: 4,
     reviews: 1393,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Amit Singh",
+        rating: 4,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 2,
+        name: "Pooja Joshi",
+        rating: 3.7,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 3,
+        name: "Suresh Pillai",
+        rating: 4.2,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 4,
+        name: "Shreya Bose",
+        rating: 3.9,
+        comment: "Average experience, food options were limited near the property."
+      }
+    ]
   },
-{
+  {
     id: 85,
     name: "Temple View Inn",
     address: "Chennai, Tamil Nadu",
@@ -1446,14 +4806,54 @@ const Context = (props) => {
     price: 2400,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.7,
     reviews: 80,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Karan Malhotra",
+        rating: 4.7,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 2,
+        name: "Kavita Desai",
+        rating: 4.4,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 3,
+        name: "Vivek Choudhary",
+        rating: 4.9,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 4,
+        name: "Tanvi Shah",
+        rating: 4.6,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      }
+    ]
   },
-{
+  {
     id: 86,
     name: "Airport Grand",
     address: "Chennai, Tamil Nadu",
@@ -1463,14 +4863,54 @@ const Context = (props) => {
     price: 2700,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.1,
     reviews: 217,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rahul Kapoor",
+        rating: 4.1,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      },
+      {
+        id: 2,
+        name: "Meera Krishnan",
+        rating: 3.8,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 3,
+        name: "Rajesh Tiwari",
+        rating: 4.3,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 4,
+        name: "Priya Verma",
+        rating: 4,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      }
+    ]
   },
-{
+  {
     id: 87,
     name: "Adyar Residency",
     address: "Chennai, Tamil Nadu",
@@ -1480,14 +4920,54 @@ const Context = (props) => {
     price: 2600,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 4.8,
     reviews: 354,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Manish Yadav",
+        rating: 4.8,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 2,
+        name: "Anjali Saxena",
+        rating: 4.5,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 3,
+        name: "Harish Pandey",
+        rating: 5,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 4,
+        name: "Ananya Iyer",
+        rating: 4.7,
+        comment: "The view from the room was stunning, highly recommend this place."
+      }
+    ]
   },
-{
+  {
     id: 88,
     name: "Royal Tamil Stay",
     address: "Chennai, Tamil Nadu",
@@ -1497,14 +4977,54 @@ const Context = (props) => {
     price: 3100,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.2,
     reviews: 491,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Aditya Bhatt",
+        rating: 4.2,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 2,
+        name: "Isha Chopra",
+        rating: 3.9,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 3,
+        name: "Amit Singh",
+        rating: 4.4,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 4,
+        name: "Pooja Joshi",
+        rating: 4.1,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      }
+    ]
   },
-{
+  {
     id: 89,
     name: "Coastal Pearl Hotel",
     address: "Chennai, Tamil Nadu",
@@ -1514,14 +5034,54 @@ const Context = (props) => {
     price: 2300,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.9,
     reviews: 628,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Deepak Kumar",
+        rating: 4.9,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 2,
+        name: "Lakshmi Menon",
+        rating: 4.6,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 3,
+        name: "Karan Malhotra",
+        rating: 5,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 4,
+        name: "Kavita Desai",
+        rating: 4.8,
+        comment: "Perfect for a short trip, everything was well maintained."
+      }
+    ]
   },
-{
+  {
     id: 90,
     name: "Green Park Chennai",
     address: "Chennai, Tamil Nadu",
@@ -1531,14 +5091,54 @@ const Context = (props) => {
     price: 3500,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 4.3,
     reviews: 765,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Nikhil Bansal",
+        rating: 4.3,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 2,
+        name: "Neha Gupta",
+        rating: 4,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 3,
+        name: "Rahul Kapoor",
+        rating: 4.5,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 4,
+        name: "Meera Krishnan",
+        rating: 4.2,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      }
+    ]
   },
-{
+  {
     id: 91,
     name: "Pune Central Hotel",
     address: "Pune, Maharashtra",
@@ -1548,14 +5148,54 @@ const Context = (props) => {
     price: 2700,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 3.7,
     reviews: 902,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rohan Sharma",
+        rating: 3.7,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 2,
+        name: "Sneha Reddy",
+        rating: 3.4,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 3,
+        name: "Manish Yadav",
+        rating: 3.9,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 4,
+        name: "Anjali Saxena",
+        rating: 3.6,
+        comment: "Room was fine but the AC was noisy at night."
+      }
+    ]
   },
-{
+  {
     id: 92,
     name: "Koregaon Park Inn",
     address: "Pune, Maharashtra",
@@ -1565,14 +5205,54 @@ const Context = (props) => {
     price: 3600,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.4,
     reviews: 1039,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Vikram Rao",
+        rating: 4.4,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 2,
+        name: "Divya Menon",
+        rating: 4.1,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 3,
+        name: "Aditya Bhatt",
+        rating: 4.6,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 4,
+        name: "Isha Chopra",
+        rating: 4.3,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      }
+    ]
   },
-{
+  {
     id: 93,
     name: "Deccan Palace",
     address: "Pune, Maharashtra",
@@ -1582,14 +5262,54 @@ const Context = (props) => {
     price: 3100,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 3.8,
     reviews: 1176,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Arjun Nair",
+        rating: 3.8,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 2,
+        name: "Ritu Chawla",
+        rating: 3.5,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      },
+      {
+        id: 3,
+        name: "Deepak Kumar",
+        rating: 4,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 4,
+        name: "Lakshmi Menon",
+        rating: 3.7,
+        comment: "Good location but service was a little slow during checkout."
+      }
+    ]
   },
-{
+  {
     id: 94,
     name: "Pune Heritage Hotel",
     address: "Pune, Maharashtra",
@@ -1599,14 +5319,54 @@ const Context = (props) => {
     price: 2900,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.5,
     reviews: 1313,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Sanjay Mehta",
+        rating: 4.5,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 2,
+        name: "Nisha Agarwal",
+        rating: 4.2,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 3,
+        name: "Nikhil Bansal",
+        rating: 4.7,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 4,
+        name: "Neha Gupta",
+        rating: 4.4,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      }
+    ]
   },
-{
+  {
     id: 95,
     name: "Tech Park Residency",
     address: "Pune, Maharashtra",
@@ -1616,14 +5376,54 @@ const Context = (props) => {
     price: 2500,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 3.9,
     reviews: 1450,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Suresh Pillai",
+        rating: 3.9,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      },
+      {
+        id: 2,
+        name: "Shreya Bose",
+        rating: 3.6,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 3,
+        name: "Rohan Sharma",
+        rating: 4.1,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 4,
+        name: "Sneha Reddy",
+        rating: 3.8,
+        comment: "Room was fine but the AC was noisy at night."
+      }
+    ]
   },
-{
+  {
     id: 96,
     name: "Blue Ridge Hotel",
     address: "Pune, Maharashtra",
@@ -1633,14 +5433,54 @@ const Context = (props) => {
     price: 2800,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 4.6,
     reviews: 137,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Vivek Choudhary",
+        rating: 4.6,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 2,
+        name: "Tanvi Shah",
+        rating: 4.3,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 3,
+        name: "Vikram Rao",
+        rating: 4.8,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 4,
+        name: "Divya Menon",
+        rating: 4.5,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      }
+    ]
   },
-{
+  {
     id: 97,
     name: "Lakeside Pune",
     address: "Pune, Maharashtra",
@@ -1650,14 +5490,54 @@ const Context = (props) => {
     price: 3400,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
-    rating: 4.0,
+    image: [
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
+    rating: 4,
     reviews: 274,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rajesh Tiwari",
+        rating: 4,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 2,
+        name: "Priya Verma",
+        rating: 3.7,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 3,
+        name: "Arjun Nair",
+        rating: 4.2,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 4,
+        name: "Ritu Chawla",
+        rating: 3.9,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      }
+    ]
   },
-{
+  {
     id: 98,
     name: "Royal Deccan Stay",
     address: "Pune, Maharashtra",
@@ -1667,14 +5547,54 @@ const Context = (props) => {
     price: 2200,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.7,
     reviews: 411,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Harish Pandey",
+        rating: 4.7,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 2,
+        name: "Ananya Iyer",
+        rating: 4.4,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 3,
+        name: "Sanjay Mehta",
+        rating: 4.9,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 4,
+        name: "Nisha Agarwal",
+        rating: 4.6,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      }
+    ]
   },
-{
+  {
     id: 99,
     name: "Pune Grand Inn",
     address: "Pune, Maharashtra",
@@ -1684,14 +5604,54 @@ const Context = (props) => {
     price: 3700,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 4.1,
     reviews: 548,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Amit Singh",
+        rating: 4.1,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 2,
+        name: "Pooja Joshi",
+        rating: 3.8,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 3,
+        name: "Suresh Pillai",
+        rating: 4.3,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      },
+      {
+        id: 4,
+        name: "Shreya Bose",
+        rating: 4,
+        comment: "Good location but service was a little slow during checkout."
+      }
+    ]
   },
-{
+  {
     id: 100,
     name: "The Maratha Hotel",
     address: "Pune, Maharashtra",
@@ -1701,12 +5661,52 @@ const Context = (props) => {
     price: 2100,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.8,
     reviews: 685,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Karan Malhotra",
+        rating: 4.8,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 2,
+        name: "Kavita Desai",
+        rating: 4.5,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 3,
+        name: "Vivek Choudhary",
+        rating: 5,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 4,
+        name: "Tanvi Shah",
+        rating: 4.7,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      }
+    ]
   },
   {
     id: 101,
@@ -1718,14 +5718,54 @@ const Context = (props) => {
     price: 4200,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.2,
     reviews: 822,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rahul Kapoor",
+        rating: 4.2,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 2,
+        name: "Meera Krishnan",
+        rating: 3.9,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 3,
+        name: "Rajesh Tiwari",
+        rating: 4.4,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 4,
+        name: "Priya Verma",
+        rating: 4.1,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      }
+    ]
   },
-{
+  {
     id: 102,
     name: "Palm Paradise Goa",
     address: "Goa, India",
@@ -1735,14 +5775,54 @@ const Context = (props) => {
     price: 3900,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 4.9,
     reviews: 959,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Manish Yadav",
+        rating: 4.9,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 2,
+        name: "Anjali Saxena",
+        rating: 4.6,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 3,
+        name: "Harish Pandey",
+        rating: 5,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 4,
+        name: "Ananya Iyer",
+        rating: 4.8,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      }
+    ]
   },
-{
+  {
     id: 103,
     name: "Mandovi View Hotel",
     address: "Goa, India",
@@ -1752,14 +5832,54 @@ const Context = (props) => {
     price: 3100,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.3,
     reviews: 1096,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Aditya Bhatt",
+        rating: 4.3,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 2,
+        name: "Isha Chopra",
+        rating: 4,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 3,
+        name: "Amit Singh",
+        rating: 4.5,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 4,
+        name: "Pooja Joshi",
+        rating: 4.2,
+        comment: "Loved the location and the amenities were exactly as described."
+      }
+    ]
   },
-{
+  {
     id: 104,
     name: "Sunset Coast Resort",
     address: "Goa, India",
@@ -1769,14 +5889,54 @@ const Context = (props) => {
     price: 4800,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 3.7,
     reviews: 1233,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Deepak Kumar",
+        rating: 3.7,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 2,
+        name: "Lakshmi Menon",
+        rating: 3.4,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 3,
+        name: "Karan Malhotra",
+        rating: 3.9,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 4,
+        name: "Kavita Desai",
+        rating: 3.6,
+        comment: "Average experience, food options were limited near the property."
+      }
+    ]
   },
-{
+  {
     id: 105,
     name: "Royal Goa Stay",
     address: "Goa, India",
@@ -1786,14 +5946,54 @@ const Context = (props) => {
     price: 3500,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 4.4,
     reviews: 1370,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Nikhil Bansal",
+        rating: 4.4,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 2,
+        name: "Neha Gupta",
+        rating: 4.1,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 3,
+        name: "Rahul Kapoor",
+        rating: 4.6,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 4,
+        name: "Meera Krishnan",
+        rating: 4.3,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      }
+    ]
   },
-{
+  {
     id: 106,
     name: "Coconut Grove Inn",
     address: "Goa, India",
@@ -1803,14 +6003,54 @@ const Context = (props) => {
     price: 3200,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 3.8,
     reviews: 57,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rohan Sharma",
+        rating: 3.8,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      },
+      {
+        id: 2,
+        name: "Sneha Reddy",
+        rating: 3.5,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 3,
+        name: "Manish Yadav",
+        rating: 4,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 4,
+        name: "Anjali Saxena",
+        rating: 3.7,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      }
+    ]
   },
-{
+  {
     id: 107,
     name: "Ocean Pearl Goa",
     address: "Goa, India",
@@ -1820,14 +6060,54 @@ const Context = (props) => {
     price: 4400,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.5,
     reviews: 194,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Vikram Rao",
+        rating: 4.5,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 2,
+        name: "Divya Menon",
+        rating: 4.2,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 3,
+        name: "Aditya Bhatt",
+        rating: 4.7,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 4,
+        name: "Isha Chopra",
+        rating: 4.4,
+        comment: "The view from the room was stunning, highly recommend this place."
+      }
+    ]
   },
-{
+  {
     id: 108,
     name: "Blue Lagoon Resort",
     address: "Goa, India",
@@ -1837,14 +6117,54 @@ const Context = (props) => {
     price: 3700,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 3.9,
     reviews: 331,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Arjun Nair",
+        rating: 3.9,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 2,
+        name: "Ritu Chawla",
+        rating: 3.6,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 3,
+        name: "Deepak Kumar",
+        rating: 4.1,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 4,
+        name: "Lakshmi Menon",
+        rating: 3.8,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      }
+    ]
   },
-{
+  {
     id: 109,
     name: "Seaside Crown Hotel",
     address: "Goa, India",
@@ -1854,14 +6174,54 @@ const Context = (props) => {
     price: 2900,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.6,
     reviews: 468,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Sanjay Mehta",
+        rating: 4.6,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 2,
+        name: "Nisha Agarwal",
+        rating: 4.3,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 3,
+        name: "Nikhil Bansal",
+        rating: 4.8,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 4,
+        name: "Neha Gupta",
+        rating: 4.5,
+        comment: "Perfect for a short trip, everything was well maintained."
+      }
+    ]
   },
-{
+  {
     id: 110,
     name: "Tropical Haven",
     address: "Goa, India",
@@ -1871,14 +6231,54 @@ const Context = (props) => {
     price: 4600,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
-    rating: 4.0,
+    image: [
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
+    rating: 4,
     reviews: 605,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Suresh Pillai",
+        rating: 4,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 2,
+        name: "Shreya Bose",
+        rating: 3.7,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 3,
+        name: "Rohan Sharma",
+        rating: 4.2,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      },
+      {
+        id: 4,
+        name: "Sneha Reddy",
+        rating: 3.9,
+        comment: "Average experience, food options were limited near the property."
+      }
+    ]
   },
-{
+  {
     id: 111,
     name: "Lucknow Residency",
     address: "Lucknow, Uttar Pradesh",
@@ -1888,14 +6288,54 @@ const Context = (props) => {
     price: 2400,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 4.7,
     reviews: 742,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Vivek Choudhary",
+        rating: 4.7,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 2,
+        name: "Tanvi Shah",
+        rating: 4.4,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 3,
+        name: "Vikram Rao",
+        rating: 4.9,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 4,
+        name: "Divya Menon",
+        rating: 4.6,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      }
+    ]
   },
-{
+  {
     id: 112,
     name: "Nawabi Palace Hotel",
     address: "Lucknow, Uttar Pradesh",
@@ -1905,14 +6345,54 @@ const Context = (props) => {
     price: 3200,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.1,
     reviews: 879,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rajesh Tiwari",
+        rating: 4.1,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 2,
+        name: "Priya Verma",
+        rating: 3.8,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      },
+      {
+        id: 3,
+        name: "Arjun Nair",
+        rating: 4.3,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 4,
+        name: "Ritu Chawla",
+        rating: 4,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      }
+    ]
   },
-{
+  {
     id: 113,
     name: "Gomti View Inn",
     address: "Lucknow, Uttar Pradesh",
@@ -1922,14 +6402,54 @@ const Context = (props) => {
     price: 2700,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.8,
     reviews: 1016,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Harish Pandey",
+        rating: 4.8,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 2,
+        name: "Ananya Iyer",
+        rating: 4.5,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 3,
+        name: "Sanjay Mehta",
+        rating: 5,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 4,
+        name: "Nisha Agarwal",
+        rating: 4.7,
+        comment: "Loved the location and the amenities were exactly as described."
+      }
+    ]
   },
-{
+  {
     id: 114,
     name: "Awadh Grand Hotel",
     address: "Lucknow, Uttar Pradesh",
@@ -1939,14 +6459,54 @@ const Context = (props) => {
     price: 2900,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 4.2,
     reviews: 1153,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Amit Singh",
+        rating: 4.2,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 2,
+        name: "Pooja Joshi",
+        rating: 3.9,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 3,
+        name: "Suresh Pillai",
+        rating: 4.4,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 4,
+        name: "Shreya Bose",
+        rating: 4.1,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      }
+    ]
   },
-{
+  {
     id: 115,
     name: "Royal Lucknow Stay",
     address: "Lucknow, Uttar Pradesh",
@@ -1956,14 +6516,54 @@ const Context = (props) => {
     price: 1800,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.9,
     reviews: 1290,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Karan Malhotra",
+        rating: 4.9,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 2,
+        name: "Kavita Desai",
+        rating: 4.6,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 3,
+        name: "Vivek Choudhary",
+        rating: 5,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 4,
+        name: "Tanvi Shah",
+        rating: 4.8,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      }
+    ]
   },
-{
+  {
     id: 116,
     name: "Heritage Awadh Inn",
     address: "Lucknow, Uttar Pradesh",
@@ -1973,14 +6573,54 @@ const Context = (props) => {
     price: 2100,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.3,
     reviews: 1427,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rahul Kapoor",
+        rating: 4.3,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 2,
+        name: "Meera Krishnan",
+        rating: 4,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 3,
+        name: "Rajesh Tiwari",
+        rating: 4.5,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 4,
+        name: "Priya Verma",
+        rating: 4.2,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      }
+    ]
   },
-{
+  {
     id: 117,
     name: "City Crown Lucknow",
     address: "Lucknow, Uttar Pradesh",
@@ -1990,14 +6630,54 @@ const Context = (props) => {
     price: 2300,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 3.7,
     reviews: 114,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Manish Yadav",
+        rating: 3.7,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 2,
+        name: "Anjali Saxena",
+        rating: 3.4,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 3,
+        name: "Harish Pandey",
+        rating: 3.9,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 4,
+        name: "Ananya Iyer",
+        rating: 3.6,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      }
+    ]
   },
-{
+  {
     id: 118,
     name: "Green Avenue Hotel",
     address: "Lucknow, Uttar Pradesh",
@@ -2007,14 +6687,54 @@ const Context = (props) => {
     price: 2500,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.4,
     reviews: 251,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Aditya Bhatt",
+        rating: 4.4,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 2,
+        name: "Isha Chopra",
+        rating: 4.1,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 3,
+        name: "Amit Singh",
+        rating: 4.6,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 4,
+        name: "Pooja Joshi",
+        rating: 4.3,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      }
+    ]
   },
-{
+  {
     id: 119,
     name: "The Lucknow Grand",
     address: "Lucknow, Uttar Pradesh",
@@ -2024,14 +6744,54 @@ const Context = (props) => {
     price: 3500,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 3.8,
     reviews: 388,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Deepak Kumar",
+        rating: 3.8,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 2,
+        name: "Lakshmi Menon",
+        rating: 3.5,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 3,
+        name: "Karan Malhotra",
+        rating: 4,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      },
+      {
+        id: 4,
+        name: "Kavita Desai",
+        rating: 3.7,
+        comment: "Good location but service was a little slow during checkout."
+      }
+    ]
   },
-{
+  {
     id: 120,
     name: "Awadh Comfort Hotel",
     address: "Lucknow, Uttar Pradesh",
@@ -2041,14 +6801,54 @@ const Context = (props) => {
     price: 2200,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 4.5,
     reviews: 525,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Nikhil Bansal",
+        rating: 4.5,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 2,
+        name: "Neha Gupta",
+        rating: 4.2,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 3,
+        name: "Rahul Kapoor",
+        rating: 4.7,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 4,
+        name: "Meera Krishnan",
+        rating: 4.4,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      }
+    ]
   },
-{
+  {
     id: 121,
     name: "Varanasi Heritage",
     address: "Varanasi, Uttar Pradesh",
@@ -2058,14 +6858,54 @@ const Context = (props) => {
     price: 2500,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 3.9,
     reviews: 662,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rohan Sharma",
+        rating: 3.9,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 2,
+        name: "Sneha Reddy",
+        rating: 3.6,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 3,
+        name: "Manish Yadav",
+        rating: 4.1,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 4,
+        name: "Anjali Saxena",
+        rating: 3.8,
+        comment: "Room was fine but the AC was noisy at night."
+      }
+    ]
   },
-{
+  {
     id: 122,
     name: "Ganga View Palace",
     address: "Varanasi, Uttar Pradesh",
@@ -2075,14 +6915,54 @@ const Context = (props) => {
     price: 2900,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.6,
     reviews: 799,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Vikram Rao",
+        rating: 4.6,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 2,
+        name: "Divya Menon",
+        rating: 4.3,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 3,
+        name: "Aditya Bhatt",
+        rating: 4.8,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 4,
+        name: "Isha Chopra",
+        rating: 4.5,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      }
+    ]
   },
-{
+  {
     id: 123,
     name: "Kashi Grand Hotel",
     address: "Varanasi, Uttar Pradesh",
@@ -2092,14 +6972,54 @@ const Context = (props) => {
     price: 2700,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
-    rating: 4.0,
+    image: [
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
+    rating: 4,
     reviews: 936,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Arjun Nair",
+        rating: 4,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 2,
+        name: "Ritu Chawla",
+        rating: 3.7,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      },
+      {
+        id: 3,
+        name: "Deepak Kumar",
+        rating: 4.2,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 4,
+        name: "Lakshmi Menon",
+        rating: 3.9,
+        comment: "Good location but service was a little slow during checkout."
+      }
+    ]
   },
-{
+  {
     id: 124,
     name: "Temple View Residency",
     address: "Varanasi, Uttar Pradesh",
@@ -2109,14 +7029,54 @@ const Context = (props) => {
     price: 2300,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.7,
     reviews: 1073,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Sanjay Mehta",
+        rating: 4.7,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 2,
+        name: "Nisha Agarwal",
+        rating: 4.4,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 3,
+        name: "Nikhil Bansal",
+        rating: 4.9,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 4,
+        name: "Neha Gupta",
+        rating: 4.6,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      }
+    ]
   },
-{
+  {
     id: 125,
     name: "Banaras Palace",
     address: "Varanasi, Uttar Pradesh",
@@ -2126,14 +7086,54 @@ const Context = (props) => {
     price: 2100,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.1,
     reviews: 1210,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Suresh Pillai",
+        rating: 4.1,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      },
+      {
+        id: 2,
+        name: "Shreya Bose",
+        rating: 3.8,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 3,
+        name: "Rohan Sharma",
+        rating: 4.3,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 4,
+        name: "Sneha Reddy",
+        rating: 4,
+        comment: "Room was fine but the AC was noisy at night."
+      }
+    ]
   },
-{
+  {
     id: 126,
     name: "Kashi River Inn",
     address: "Varanasi, Uttar Pradesh",
@@ -2143,14 +7143,54 @@ const Context = (props) => {
     price: 1900,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 4.8,
     reviews: 1347,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Vivek Choudhary",
+        rating: 4.8,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 2,
+        name: "Tanvi Shah",
+        rating: 4.5,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 3,
+        name: "Vikram Rao",
+        rating: 5,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 4,
+        name: "Divya Menon",
+        rating: 4.7,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      }
+    ]
   },
-{
+  {
     id: 127,
     name: "Ghat View Hotel",
     address: "Varanasi, Uttar Pradesh",
@@ -2160,14 +7200,54 @@ const Context = (props) => {
     price: 2800,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.2,
     reviews: 1484,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rajesh Tiwari",
+        rating: 4.2,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 2,
+        name: "Priya Verma",
+        rating: 3.9,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 3,
+        name: "Arjun Nair",
+        rating: 4.4,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 4,
+        name: "Ritu Chawla",
+        rating: 4.1,
+        comment: "The view from the room was stunning, highly recommend this place."
+      }
+    ]
   },
-{
+  {
     id: 128,
     name: "Sarnath Residency",
     address: "Varanasi, Uttar Pradesh",
@@ -2177,14 +7257,54 @@ const Context = (props) => {
     price: 1800,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.9,
     reviews: 171,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Harish Pandey",
+        rating: 4.9,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 2,
+        name: "Ananya Iyer",
+        rating: 4.6,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 3,
+        name: "Sanjay Mehta",
+        rating: 5,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 4,
+        name: "Nisha Agarwal",
+        rating: 4.8,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      }
+    ]
   },
-{
+  {
     id: 129,
     name: "Banaras Comfort Stay",
     address: "Varanasi, Uttar Pradesh",
@@ -2194,14 +7314,54 @@ const Context = (props) => {
     price: 2200,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 4.3,
     reviews: 308,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Amit Singh",
+        rating: 4.3,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 2,
+        name: "Pooja Joshi",
+        rating: 4,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 3,
+        name: "Suresh Pillai",
+        rating: 4.5,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 4,
+        name: "Shreya Bose",
+        rating: 4.2,
+        comment: "Perfect for a short trip, everything was well maintained."
+      }
+    ]
   },
-{
+  {
     id: 130,
     name: "Kashi Royal Hotel",
     address: "Varanasi, Uttar Pradesh",
@@ -2211,14 +7371,54 @@ const Context = (props) => {
     price: 3100,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 3.7,
     reviews: 445,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Karan Malhotra",
+        rating: 3.7,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 2,
+        name: "Kavita Desai",
+        rating: 3.4,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 3,
+        name: "Vivek Choudhary",
+        rating: 3.9,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      },
+      {
+        id: 4,
+        name: "Tanvi Shah",
+        rating: 3.6,
+        comment: "Average experience, food options were limited near the property."
+      }
+    ]
   },
-{
+  {
     id: 131,
     name: "Chandigarh Central",
     address: "Chandigarh, India",
@@ -2228,14 +7428,54 @@ const Context = (props) => {
     price: 3300,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.4,
     reviews: 582,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rahul Kapoor",
+        rating: 4.4,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 2,
+        name: "Meera Krishnan",
+        rating: 4.1,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 3,
+        name: "Rajesh Tiwari",
+        rating: 4.6,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 4,
+        name: "Priya Verma",
+        rating: 4.3,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      }
+    ]
   },
-{
+  {
     id: 132,
     name: "Rose Garden Hotel",
     address: "Chandigarh, India",
@@ -2245,14 +7485,54 @@ const Context = (props) => {
     price: 2800,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 3.8,
     reviews: 719,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Manish Yadav",
+        rating: 3.8,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 2,
+        name: "Anjali Saxena",
+        rating: 3.5,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      },
+      {
+        id: 3,
+        name: "Harish Pandey",
+        rating: 4,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 4,
+        name: "Ananya Iyer",
+        rating: 3.7,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      }
+    ]
   },
-{
+  {
     id: 133,
     name: "Sukhna View Inn",
     address: "Chandigarh, India",
@@ -2262,14 +7542,54 @@ const Context = (props) => {
     price: 3600,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.5,
     reviews: 856,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Aditya Bhatt",
+        rating: 4.5,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 2,
+        name: "Isha Chopra",
+        rating: 4.2,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 3,
+        name: "Amit Singh",
+        rating: 4.7,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 4,
+        name: "Pooja Joshi",
+        rating: 4.4,
+        comment: "Loved the location and the amenities were exactly as described."
+      }
+    ]
   },
-{
+  {
     id: 134,
     name: "The Chandigarh Grand",
     address: "Chandigarh, India",
@@ -2279,14 +7599,54 @@ const Context = (props) => {
     price: 3900,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 3.9,
     reviews: 993,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Deepak Kumar",
+        rating: 3.9,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 2,
+        name: "Lakshmi Menon",
+        rating: 3.6,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 3,
+        name: "Karan Malhotra",
+        rating: 4.1,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 4,
+        name: "Kavita Desai",
+        rating: 3.8,
+        comment: "Average experience, food options were limited near the property."
+      }
+    ]
   },
-{
+  {
     id: 135,
     name: "Punjab Heritage Hotel",
     address: "Chandigarh, India",
@@ -2296,14 +7656,54 @@ const Context = (props) => {
     price: 2400,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 4.6,
     reviews: 1130,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Nikhil Bansal",
+        rating: 4.6,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 2,
+        name: "Neha Gupta",
+        rating: 4.3,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 3,
+        name: "Rahul Kapoor",
+        rating: 4.8,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 4,
+        name: "Meera Krishnan",
+        rating: 4.5,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      }
+    ]
   },
-{
+  {
     id: 136,
     name: "Urban Chandigarh Stay",
     address: "Chandigarh, India",
@@ -2313,14 +7713,54 @@ const Context = (props) => {
     price: 2200,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
-    rating: 4.0,
+    image: [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
+    rating: 4,
     reviews: 1267,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rohan Sharma",
+        rating: 4,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      },
+      {
+        id: 2,
+        name: "Sneha Reddy",
+        rating: 3.7,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 3,
+        name: "Manish Yadav",
+        rating: 4.2,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 4,
+        name: "Anjali Saxena",
+        rating: 3.9,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      }
+    ]
   },
-{
+  {
     id: 137,
     name: "City Crown Chandigarh",
     address: "Chandigarh, India",
@@ -2330,14 +7770,54 @@ const Context = (props) => {
     price: 3100,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.7,
     reviews: 1404,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Vikram Rao",
+        rating: 4.7,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 2,
+        name: "Divya Menon",
+        rating: 4.4,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 3,
+        name: "Aditya Bhatt",
+        rating: 4.9,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 4,
+        name: "Isha Chopra",
+        rating: 4.6,
+        comment: "The view from the room was stunning, highly recommend this place."
+      }
+    ]
   },
-{
+  {
     id: 138,
     name: "North Star Hotel",
     address: "Chandigarh, India",
@@ -2347,14 +7827,54 @@ const Context = (props) => {
     price: 3500,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 4.1,
     reviews: 91,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Arjun Nair",
+        rating: 4.1,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 2,
+        name: "Ritu Chawla",
+        rating: 3.8,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 3,
+        name: "Deepak Kumar",
+        rating: 4.3,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 4,
+        name: "Lakshmi Menon",
+        rating: 4,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      }
+    ]
   },
-{
+  {
     id: 139,
     name: "Green City Residency",
     address: "Chandigarh, India",
@@ -2364,14 +7884,54 @@ const Context = (props) => {
     price: 2600,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.8,
     reviews: 228,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Sanjay Mehta",
+        rating: 4.8,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 2,
+        name: "Nisha Agarwal",
+        rating: 4.5,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 3,
+        name: "Nikhil Bansal",
+        rating: 5,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 4,
+        name: "Neha Gupta",
+        rating: 4.7,
+        comment: "Perfect for a short trip, everything was well maintained."
+      }
+    ]
   },
-{
+  {
     id: 140,
     name: "Royal Chandigarh Hotel",
     address: "Chandigarh, India",
@@ -2381,14 +7941,54 @@ const Context = (props) => {
     price: 4200,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.2,
     reviews: 365,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Suresh Pillai",
+        rating: 4.2,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 2,
+        name: "Shreya Bose",
+        rating: 3.9,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 3,
+        name: "Rohan Sharma",
+        rating: 4.4,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 4,
+        name: "Sneha Reddy",
+        rating: 4.1,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      }
+    ]
   },
-{
+  {
     id: 141,
     name: "Ranchi Grand Hotel",
     address: "Ranchi, Jharkhand",
@@ -2398,14 +7998,54 @@ const Context = (props) => {
     price: 1900,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 4.9,
     reviews: 502,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Vivek Choudhary",
+        rating: 4.9,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 2,
+        name: "Tanvi Shah",
+        rating: 4.6,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 3,
+        name: "Vikram Rao",
+        rating: 5,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 4,
+        name: "Divya Menon",
+        rating: 4.8,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      }
+    ]
   },
-{
+  {
     id: 142,
     name: "Ranchi Palace Inn",
     address: "Ranchi, Jharkhand",
@@ -2415,14 +8055,54 @@ const Context = (props) => {
     price: 2300,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.3,
     reviews: 639,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rajesh Tiwari",
+        rating: 4.3,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 2,
+        name: "Priya Verma",
+        rating: 4,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      },
+      {
+        id: 3,
+        name: "Arjun Nair",
+        rating: 4.5,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 4,
+        name: "Ritu Chawla",
+        rating: 4.2,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      }
+    ]
   },
-{
+  {
     id: 143,
     name: "Rock Garden Hotel",
     address: "Ranchi, Jharkhand",
@@ -2432,14 +8112,54 @@ const Context = (props) => {
     price: 2500,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 3.7,
     reviews: 776,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Harish Pandey",
+        rating: 3.7,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 2,
+        name: "Ananya Iyer",
+        rating: 3.4,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      },
+      {
+        id: 3,
+        name: "Sanjay Mehta",
+        rating: 3.9,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 4,
+        name: "Nisha Agarwal",
+        rating: 3.6,
+        comment: "Good location but service was a little slow during checkout."
+      }
+    ]
   },
-{
+  {
     id: 144,
     name: "Hillside Residency",
     address: "Ranchi, Jharkhand",
@@ -2449,14 +8169,54 @@ const Context = (props) => {
     price: 2100,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 4.4,
     reviews: 913,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Amit Singh",
+        rating: 4.4,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 2,
+        name: "Pooja Joshi",
+        rating: 4.1,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      },
+      {
+        id: 3,
+        name: "Suresh Pillai",
+        rating: 4.6,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 4,
+        name: "Shreya Bose",
+        rating: 4.3,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      }
+    ]
   },
-{
+  {
     id: 145,
     name: "The Jharkhand Grand",
     address: "Ranchi, Jharkhand",
@@ -2466,14 +8226,54 @@ const Context = (props) => {
     price: 2800,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "TV", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-tv", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f3983a37?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "TV",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-tv",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 3.8,
     reviews: 1050,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Karan Malhotra",
+        rating: 3.8,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      },
+      {
+        id: 2,
+        name: "Kavita Desai",
+        rating: 3.5,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 3,
+        name: "Vivek Choudhary",
+        rating: 4,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 4,
+        name: "Tanvi Shah",
+        rating: 3.7,
+        comment: "Room was fine but the AC was noisy at night."
+      }
+    ]
   },
-{
+  {
     id: 146,
     name: "City View Ranchi",
     address: "Ranchi, Jharkhand",
@@ -2483,14 +8283,54 @@ const Context = (props) => {
     price: 1700,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "AC", "Parking", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-square-parking", "fa-solid fa-bell-concierge"],
+    image: [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "AC",
+      "Parking",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-square-parking",
+      "fa-solid fa-bell-concierge"
+    ],
     rating: 4.5,
     reviews: 1187,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Rahul Kapoor",
+        rating: 4.5,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 2,
+        name: "Meera Krishnan",
+        rating: 4.2,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      },
+      {
+        id: 3,
+        name: "Rajesh Tiwari",
+        rating: 4.7,
+        comment: "Loved the location and the amenities were exactly as described."
+      },
+      {
+        id: 4,
+        name: "Priya Verma",
+        rating: 4.4,
+        comment: "Clean rooms and friendly staff made our trip memorable."
+      }
+    ]
   },
-{
+  {
     id: 147,
     name: "Forest Edge Hotel",
     address: "Ranchi, Jharkhand",
@@ -2500,14 +8340,54 @@ const Context = (props) => {
     price: 2000,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Pool", "WiFi", "AC", "Restaurant"],
-    amenitiesIcon: ["fa-solid fa-person-swimming", "fa-solid fa-wifi", "fa-solid fa-snowflake", "fa-solid fa-utensils"],
+    image: [
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Pool",
+      "WiFi",
+      "AC",
+      "Restaurant"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-person-swimming",
+      "fa-solid fa-wifi",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-utensils"
+    ],
     rating: 3.9,
     reviews: 1324,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Manish Yadav",
+        rating: 3.9,
+        comment: "Decent stay overall, though the room could have been a bit cleaner."
+      },
+      {
+        id: 2,
+        name: "Anjali Saxena",
+        rating: 3.6,
+        comment: "Room was fine but the AC was noisy at night."
+      },
+      {
+        id: 3,
+        name: "Harish Pandey",
+        rating: 4.1,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 4,
+        name: "Ananya Iyer",
+        rating: 3.8,
+        comment: "Comfortable enough for a short stay, nothing extraordinary though."
+      }
+    ]
   },
-{
+  {
     id: 148,
     name: "Red Earth Residency",
     address: "Ranchi, Jharkhand",
@@ -2517,14 +8397,54 @@ const Context = (props) => {
     price: 2200,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["WiFi", "Gym", "AC", "Breakfast"],
-    amenitiesIcon: ["fa-solid fa-wifi", "fa-solid fa-dumbbell", "fa-solid fa-snowflake", "fa-solid fa-mug-saucer"],
+    image: [
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "WiFi",
+      "Gym",
+      "AC",
+      "Breakfast"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-wifi",
+      "fa-solid fa-dumbbell",
+      "fa-solid fa-snowflake",
+      "fa-solid fa-mug-saucer"
+    ],
     rating: 4.6,
     reviews: 1461,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Aditya Bhatt",
+        rating: 4.6,
+        comment: "Perfect for a short trip, everything was well maintained."
+      },
+      {
+        id: 2,
+        name: "Isha Chopra",
+        rating: 4.3,
+        comment: "Great stay, staff was very courteous and the room was spotless."
+      },
+      {
+        id: 3,
+        name: "Amit Singh",
+        rating: 4.8,
+        comment: "Excellent value for money, the breakfast was a nice touch."
+      },
+      {
+        id: 4,
+        name: "Pooja Joshi",
+        rating: 4.5,
+        comment: "Smooth booking experience and the hotel exceeded expectations."
+      }
+    ]
   },
-{
+  {
     id: 149,
     name: "Royal Ranchi Stay",
     address: "Ranchi, Jharkhand",
@@ -2534,14 +8454,54 @@ const Context = (props) => {
     price: 2400,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["Parking", "WiFi", "TV", "Room Service"],
-    amenitiesIcon: ["fa-solid fa-square-parking", "fa-solid fa-wifi", "fa-solid fa-tv", "fa-solid fa-bell-concierge"],
-    rating: 4.0,
+    image: [
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "Parking",
+      "WiFi",
+      "TV",
+      "Room Service"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-square-parking",
+      "fa-solid fa-wifi",
+      "fa-solid fa-tv",
+      "fa-solid fa-bell-concierge"
+    ],
+    rating: 4,
     reviews: 148,
-    offer: "20% OFF"
+    offer: "20% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Deepak Kumar",
+        rating: 4,
+        comment: "Average experience, food options were limited near the property."
+      },
+      {
+        id: 2,
+        name: "Lakshmi Menon",
+        rating: 3.7,
+        comment: "Good location but service was a little slow during checkout."
+      },
+      {
+        id: 3,
+        name: "Karan Malhotra",
+        rating: 4.2,
+        comment: "Nice hotel for the price, just wish the WiFi was faster."
+      },
+      {
+        id: 4,
+        name: "Kavita Desai",
+        rating: 3.9,
+        comment: "Good location but service was a little slow during checkout."
+      }
+    ]
   },
-{
+  {
     id: 150,
     name: "Capital Heights Ranchi",
     address: "Ranchi, Jharkhand",
@@ -2551,12 +8511,52 @@ const Context = (props) => {
     price: 2600,
     room: 1,
     guests: 1,
-    image: "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
-    amenities: ["AC", "WiFi", "Restaurant", "24/7 Front Desk"],
-    amenitiesIcon: ["fa-solid fa-snowflake", "fa-solid fa-wifi", "fa-solid fa-utensils", "fa-solid fa-clock"],
+    image: [
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1200&q=80"
+    ],
+    amenities: [
+      "AC",
+      "WiFi",
+      "Restaurant",
+      "24/7 Front Desk"
+    ],
+    amenitiesIcon: [
+      "fa-solid fa-snowflake",
+      "fa-solid fa-wifi",
+      "fa-solid fa-utensils",
+      "fa-solid fa-clock"
+    ],
     rating: 4.7,
     reviews: 285,
-    offer: "10% OFF"
+    offer: "10% OFF",
+    reviewData: [
+      {
+        id: 1,
+        name: "Nikhil Bansal",
+        rating: 4.7,
+        comment: "Spacious rooms and good WiFi speed throughout our stay."
+      },
+      {
+        id: 2,
+        name: "Neha Gupta",
+        rating: 4.4,
+        comment: "Comfortable beds and quick check-in, would definitely come back."
+      },
+      {
+        id: 3,
+        name: "Rahul Kapoor",
+        rating: 4.9,
+        comment: "The view from the room was stunning, highly recommend this place."
+      },
+      {
+        id: 4,
+        name: "Meera Krishnan",
+        rating: 4.6,
+        comment: "Staff went out of their way to help us, truly appreciated."
+      }
+    ]
   }
 ]);
   const [fData, setFData] = useState([])
