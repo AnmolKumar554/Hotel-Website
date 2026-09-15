@@ -11,19 +11,18 @@ const Details = () => {
   return (
     <div className='hero-detail'>
         <Link to={"/data"} class="hd-back-link">
-          <span aria-hidden="true">←</span> Back to hotels
+          <span aria-hidden="true"><i class="fa-solid fa-arrow-left-long"></i></span> Back to hotels
         </Link>
  
-<main class="hd-wrap">
+<main class="hd-wrap"> 
  
   
   <section class="hd-gallery" aria-label="Photo gallery">
-    <img class="hd-g1" src="https://picsum.photos/seed/maurya1/900/700" alt="Hotel Maurya, exterior"></img>
-    <img class="hd-g2" src="https://picsum.photos/seed/maurya2/500/400" alt="Guest room"></img>
-    <img class="hd-g3" src="https://picsum.photos/seed/maurya3/500/400" alt="Hotel lobby"></img>
-    {/* <img class="hd-g4" src="https://picsum.photos/seed/maurya4/500/400" alt="Hotel restaurant"></img>
-    <img class="hd-g5" src="https://picsum.photos/seed/maurya5/500/400" alt="Bathroom"></img> */}
-    <button class="hd-show-all">All photos</button>
+    {hotel.image.map((e)=>{
+      return <img class="hd-g1" src={e} alt={hotel.name}></img>
+    })}
+    
+    {/* <button class="hd-show-all">All photos</button> */}
   </section>
  
   
@@ -46,14 +45,7 @@ const Details = () => {
     <div class="hd-main-col">
  
       <section class="hd-block">
-        {/* <h2>About this hotel</h2>
-        <p>
-          Hotel Maurya sits a few minutes from Fraser Road's shopping strip and
-          the Hartali More junction, with easy access to Patna Junction and the
-          city's business district. Rooms are quiet and well kept, built around
-          the essentials — a comfortable bed, reliable air conditioning, and a
-          front desk that's staffed around the clock for whatever comes up.
-        </p> */}
+        
       </section>
  
       <hr></hr>
@@ -147,7 +139,7 @@ const Details = () => {
           </div>
         </div>
  
-        <button class="hd-book-btn">Book Now</button>
+        <Link to={`/booking/${hotel.id}`}><button class="hd-book-btn" >Book Now</button></Link>
         <p class="hd-booking-note">Free cancellation until 24 hours before check-in</p>
       </div>
     </aside>

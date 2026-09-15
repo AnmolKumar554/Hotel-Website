@@ -1,18 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Link, useParams } from 'react-router-dom'
+import { ContextData } from './Context'
 
 const Booking = () => {
+  const {hotelData,setHotelData} = useContext(ContextData)
+  const {id} = useParams()
+  const hotel=hotelData.find((e)=>e.id===Number(id))
+  const {checkInDate,setCheckInDate} = useContext(ContextData)
+  const {checkOutDate,setCheckOutDate} = useContext(ContextData)
   return (
     <div>
       <div class="bk-topbar">
     <div class="bk-wordmark">Tidewater</div>
-    <a class="bk-back-link" href="#"> Back to Marrow Cabin</a>
+    <Link class="bk-back-link" to={`/details/${hotel.id}`}> Back to {hotel.name}</Link>
   </div>
  
   <div class="bk-titleblock">
     <div class="bk-swatch"></div>
     <div>
       <h1>Complete your booking</h1>
-      <div class="bk-sub">Marrow Cabin · Sable Point, Nova Scotia</div>
+      <div class="bk-sub">{hotel.name} · {hotel.expandedAddress}</div>
     </div>
   </div>
  
@@ -24,11 +31,11 @@ const Booking = () => {
         <div class="bk-row-2">
           <div class="bk-field">
             <label for="bkCheckin">Check-in</label>
-            <input type="date" id="bkCheckin" required min="2026-09-13"></input>
+            <input type="date" id="bkCheckin" value={checkInDate}></input>
           </div>
           <div class="bk-field">
             <label for="bkCheckout">Check-out</label>
-            <input type="date" id="bkCheckout" required min="2026-09-14"></input>
+            <input type="date" id="bkCheckout" value={checkOutDate}></input>
           </div>
         </div>
  
@@ -39,7 +46,7 @@ const Booking = () => {
             <span class="bk-guest-count" id="bkGuestCount">2</span>
             <button type="button" class="bk-step-btn" id="bkGuestPlus">+</button>
           </div>
-          <div class="bk-field-hint" id="bkGuestHint">Up to 4 guests for this cabin</div>
+          <div class="bk-field-hint" id="bkGuestHint">Up to 5 guests for this cabin</div>
         </div>
  
         <div class="bk-field">
@@ -73,17 +80,17 @@ const Booking = () => {
         <div class="bk-row-2">
           <div class="bk-field">
             <label for="bkFullname">Full name</label>
-            <input type="text" id="bkFullname" required placeholder="Jordan Ellis"></input>
+            <input type="text" id="bkFullname"  placeholder="Jordan Ellis"></input>
           </div>
           <div class="bk-field">
             <label for="bkEmail">Email</label>
-            <input type="email" id="bkEmail" required placeholder="jordan.ellis@mail.com"></input>
+            <input type="email" id="bkEmail"  placeholder="jordan.ellis@mail.com"></input>
           </div>
         </div>
         <div class="bk-row-2">
           <div class="bk-field">
             <label for="bkPhone">Phone</label>
-            <input type="tel" id="bkPhone" required placeholder="+1 (902) 555-0148"></input>
+            <input type="tel" id="bkPhone"  placeholder="+1 (902) 555-0148"></input>
           </div>
           <div class="bk-field">
             <label for="bkArrival">Estimated arrival</label>
@@ -142,7 +149,7 @@ const Booking = () => {
         <h3>Marrow Cabin</h3>
         <div class="bk-loc">Sable Point, Nova Scotia</div>
  
-        <div class="bk-summary-line bk-dates"><span>Dates</span><strong id="bkSumDates">Select dates</strong></div>
+        {/* <div class="bk-summary-line bk-dates"><span>Dates</span><strong id="bkSumDates"></strong></div> */}
         <div class="bk-summary-line bk-guests"><span>Guests</span><strong id="bkSumGuests">2</strong></div>
         <div class="bk-summary-line"><span>Room</span><strong id="bkSumRoom">Driftwood Suite</strong></div>
  

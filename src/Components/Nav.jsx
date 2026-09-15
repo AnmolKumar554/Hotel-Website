@@ -12,11 +12,13 @@ const Nav = () => {
   const {text,setText} = useContext(ContextData)
   const {checkInDate,setCheckInDate} = useContext(ContextData)
   const {checkOutDate,setCheckOutDate} = useContext(ContextData)
+  const [count, setCount] = useState(1)
   // const {room,setRoom} = useContext(ContextData)
-  // const {guest,setGuest}=useContext(ContextData)
+  const {guest,setGuest}=useContext(ContextData)
   const {rmAndGuest,setRmAndGuest}=useContext(ContextData)
   const {rmData,setRmData} = useContext(ContextData)
   const navigate=useNavigate()
+
   function update(id,newQty){
     setRmAndGuest(prevRmAndGuest=>
       prevRmAndGuest.map(e=>        
@@ -24,17 +26,24 @@ const Nav = () => {
       )
     )
   }
-  // function updateRoom(id,room){
-  //   setRmData(prev=>
-  //     prev.map(e=>
-  //       click?{...e,Room:room,id:id}:e
-  //     )
-  //   )
-  // }
+  function addRoomAndGuest(){
+    if(count<rmAndGuest.length){
+      setCount(count+1)
+    }
+  }
+  
+  const addedRmAndGuest = rmAndGuest.slice(0,count)
+  
   function submit(e){
     e.preventDefault()
     setFData(hotelData.filter((el)=> el.address.includes(text)))
     console.log(fData);
+  }
+
+  function guests(){
+    addedRmAndGuest.map((e)=>{
+      setGuest(guest+Number(e.Guest))
+    })
   }
 
   return (
@@ -47,10 +56,9 @@ const Nav = () => {
             <i className="fa-solid fa-location-dot"></i>
             <div className="field-text">
               <label for="destination">Destination</label>
-              <input id="destination" type="text" placeholder="Search city or hotel" value={text} onKeyDown={(e)=>{
-                
+              <input id="destination" type="text" placeholder="Search city or hotel" value={text.charAt(0).toUpperCase()+text.slice(1).toLowerCase()} onKeyDown={(e)=>{
                 if(e.key="Enter"){
-                  setFData(hotelData.filter((e)=> e.address.includes(text)))
+                  setFData(hotelData.filter((e)=> e.address.includes(text.charAt(0).toUpperCase()+text.slice(1).toLowerCase())))
                 }
               }} onChange={(e)=>{
                 setText(e.target.value)
@@ -88,18 +96,18 @@ const Nav = () => {
           <label>Rooms &amp; guests</label>
           <div className="counter-row">
             <div className="counter">
-              <span type="number">1</span>
+              <span type="number">{addedRmAndGuest.length}</span>
               <span>room</span>
             </div>
             <div className="counter">
-              <span type="number"  aria-label="Guests">1</span>
+              <span type="number"  aria-label="Guests">{guest}</span>
               <span>guests</span>
             </div>
             </div>
           </div>
         </div>
         {display &&
-            <div class="rg-box" id="rgBox"   >
+            <div class="rg-box" id="rgBox">
 
             <div class="rg-header">
               <span class="rg-title">Room &amp; Guests</span>
@@ -113,19 +121,19 @@ const Nav = () => {
               <span class="rg-col-label">Guest</span>
             </div>
               <div class="rg-body" id="rgBody">
-                {rmAndGuest.map((e)=>{
+                {addedRmAndGuest.map((e)=>{
                   return<>
                       <div class="rg-row">
                         <span class="rg-room-label"><i class="fa-solid fa-bed"></i>Room {e.Room}</span>
                         <div class="rg-qty-control">
-                          <button class="rg-qty-btn rg-qty-minus" onClick={()=>{
+                          <button class="rg-qty-btn rg-qty-minus"   onClick={()=>{                            
                             if(e.Guest>1){
-                            update(e.id,e.Guest-1)
-                          }
+                              update(e.id,e.Guest-1)
+                            }
 
                           }}><i class="fa-solid fa-minus"></i></button>
                           <span class="rg-qty-value">{e.Guest}</span>
-                          <button class="rg-qty-btn rg-qty-plus" onClick={()=>{
+                          <button class="rg-qty-btn rg-qty-plus"  onClick={()=>{
                             if(e.Guest<5){
                             update(e.id,e.Guest+1)
                           }
@@ -135,10 +143,14 @@ const Nav = () => {
                   </>
                 })}
               </div>
-            <button class="rg-footer" id="rgAddRoom">
+            <button class="rg-footer" id="rgAddRoom"  onClick={addRoomAndGuest}>
               <i class="fa-solid fa-plus"></i> Add Room
             </button>
-            <button class="rg-footer" id="rgAddRoom">
+            <button class="rg-footer" id="rgAddRoom"  onClick={()=>{
+              if(count>1){
+                setCount(count-1)
+              }
+            }}>
               <i class="fa-solid fa-minus"></i>
               Remove Room
             </button>

@@ -16,6 +16,11 @@ const Hotel = () => {
     const [amentites, setAmentites] = useState([])  
     
     const navigate=useNavigate()
+
+    function filterSystem(e){
+      return (e.availableFrom<=checkInDate && e.availableTo>=checkInDate && checkInDate<checkOutDate) && (e.availableTo>=checkOutDate && e.availableFrom<=checkOutDate && checkOutDate>checkInDate) && e.price<=range && amentites.every(el=> e.amenities.includes(el))
+    }
+
   return (
   <>
   <div className='hero-filter'>
@@ -69,7 +74,7 @@ const Hotel = () => {
     </div>
     <div className='hotel-main'>
       {fData.map((e)=>{
-        if((e.availableFrom<=checkInDate && e.availableTo>=checkInDate && checkInDate<checkOutDate) && (e.availableTo>=checkOutDate && e.availableFrom<=checkOutDate && checkOutDate>checkInDate) && e.price<=range && amentites.every(el=> e.amenities.includes(el))){
+        if(filterSystem(e)){
           return <>
               <div className="hotel-card">
                 <div className="hotel-card__media">

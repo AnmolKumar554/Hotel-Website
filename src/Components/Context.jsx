@@ -8564,41 +8564,39 @@ const Context = (props) => {
   const [checkInDate, setCheckInDate] = useState("")
   const [checkOutDate,setCheckOutDate]=useState("")
   // const [room, setRoom] = useState(1)
-  // const [guest, setGuest] = useState(1)
+  const [guest, setGuest] = useState(1)
   const [rmAndGuest, setRmAndGuest] = useState([
 {
   id:1,
   Room:1,
   Guest:1
   },
-])
-  const [rmData, setRmData] = useState([
-  // {
-  //   id:2,
-  //   Room:id,
-  //   Guest:1
-  // },
-  // {
-  //   id:3,
-  //   Room:id,
-  //   Guest:1
-  // },
-  // {
-  //   id:4,
-  //   Room:id,
-  //   Guest:1
-  // },
-  // {
-  //   id:5,
-  //   Room:id,
-  //   Guest:1
-  // }
-])
+  {
+    id:2,
+    Room:2,
+    Guest:1
+  },
+  {
+    id:3,
+    Room:3,
+    Guest:1,
+  },
+  {
+    id:4,
+    Room:4,
+    Guest:1
+  },
+  {
+    id:5,
+    Room:5,
+    Guest:1
+  }
+]);
   
   return (
     <div>
         <ContextData.Provider value={{hotelData,setHotelData,text,setText,checkInDate,setCheckInDate,checkOutDate,setCheckOutDate,
-          rmAndGuest,setRmAndGuest,fData,setFData,rmData,setRmData
+          rmAndGuest,setRmAndGuest,fData,setFData,guest,setGuest
         }}
         >
             {props.children}
