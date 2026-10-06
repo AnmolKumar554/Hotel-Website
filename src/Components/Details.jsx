@@ -10,20 +10,20 @@ const Details = () => {
   const {checkOutDate,setCheckOutDate} = useContext(ContextData)
   return (
     <div className='hero-detail'>
-        <Link to={"/data"} class="hd-back-link">
-          <span aria-hidden="true"><i class="fa-solid fa-arrow-left-long"></i></span> Back to hotels
+        <Link to={"/data"} className="hd-back-link">
+          <span aria-hidden="true"><i className="fa-solid fa-arrow-left-long"></i></span> Back to hotels
         </Link>
  
-<main class="hd-wrap"> 
+      <main className="hd-wrap"> 
  
   
-  <section class="hd-gallery" aria-label="Photo gallery">
-    {hotel.image.map((e)=>{
-      return <img class="hd-g1" src={e} alt={hotel.name}></img>
-    })}
+        <section className="hd-gallery" aria-label="Photo gallery">
+          {hotel.image.map((e)=>{
+            return <img className="hd-g1" src={e} alt={hotel.name}></img>
+          })}
     
-    {/* <button class="hd-show-all">All photos</button> */}
-  </section>
+          {/* <button class="hd-show-all">All photos</button> */}
+        </section>
  
   
   <div class="hd-title-row">

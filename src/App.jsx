@@ -5,6 +5,7 @@ import Hotel from './Components/Hotel'
 import Footer from './Components/Footer'
 import Details from './Components/Details'
 import Booking from './Components/Booking'
+import Home from './Components/Home'
 const App = () => {
 
   function update(id,newQty){
@@ -17,11 +18,14 @@ const App = () => {
   return (
     <div>
       <Nav></Nav>
+      
       <Routes>
         <Route path='/data' element={<Hotel />}></Route>
         <Route path='/details/:id' element={<Details />}></Route>
         <Route path='/booking/:id' element={<Booking />}></Route>
+        <Route path='/' element={<Home />}></Route> 
       </Routes>
+      
       <Footer></Footer>
     </div>
   )

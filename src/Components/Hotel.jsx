@@ -52,7 +52,7 @@ const Hotel = () => {
             <label class="chip">
               <input type="checkbox" value={e} onChange={(ele)=>{
                 console.log(amentites);
-                if(ele.target.checked===true){
+                if(ele.target.checked === true){
                   const newAmmnt=[...amentites]
                   newAmmnt.push(e)
                   setAmentites(newAmmnt)

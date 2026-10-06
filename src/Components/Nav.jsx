@@ -1,6 +1,6 @@
 import { useContext, useState } from "react"
 import { ContextData } from "./Context"
-import { useNavigate } from "react-router-dom"
+import { UNSAFE_useScrollRestoration, useNavigate } from "react-router-dom"
 
 const Nav = () => {
 
@@ -13,10 +13,12 @@ const Nav = () => {
   const {checkInDate,setCheckInDate} = useContext(ContextData)
   const {checkOutDate,setCheckOutDate} = useContext(ContextData)
   const [count, setCount] = useState(1)
-  // const {room,setRoom} = useContext(ContextData)
-  const {guest,setGuest}=useContext(ContextData)
+  const [total, setTotal] = useState(1)
+  const [finalTotal, setFinalTotal] = useState(0)
   const {rmAndGuest,setRmAndGuest}=useContext(ContextData)
   const {rmData,setRmData} = useContext(ContextData)
+  
+  
   const navigate=useNavigate()
 
   function update(id,newQty){
@@ -26,13 +28,16 @@ const Nav = () => {
       )
     )
   }
+  
+  const addedRmAndGuest=rmAndGuest.slice(0,count)
   function addRoomAndGuest(){
     if(count<rmAndGuest.length){
-      setCount(count+1)
+      setCount(prev=>prev+1)
+      setTotal(prev=>prev+1)
+      console.log(addedRmAndGuest);
+      
     }
   }
-  
-  const addedRmAndGuest = rmAndGuest.slice(0,count)
   
   function submit(e){
     e.preventDefault()
@@ -40,17 +45,11 @@ const Nav = () => {
     console.log(fData);
   }
 
-  function guests(){
-    addedRmAndGuest.map((e)=>{
-      setGuest(guest+Number(e.Guest))
-    })
-  }
-
   return (
     <div>
       <nav className="navbar">
         <p className="logo" >Euler</p>
- 
+
         <form className="search-capsule" role="search" onSubmit={submit}>
           <div className="field">
             <i className="fa-solid fa-location-dot"></i>
@@ -100,7 +99,7 @@ const Nav = () => {
               <span>room</span>
             </div>
             <div className="counter">
-              <span type="number"  aria-label="Guests">{guest}</span>
+              <span type="number"  aria-label="Guests">{total}</span>
               <span>guests</span>
             </div>
             </div>
@@ -126,9 +125,10 @@ const Nav = () => {
                       <div class="rg-row">
                         <span class="rg-room-label"><i class="fa-solid fa-bed"></i>Room {e.Room}</span>
                         <div class="rg-qty-control">
-                          <button class="rg-qty-btn rg-qty-minus"   onClick={()=>{                            
+                          <button class="rg-qty-btn rg-qty-minus"   onClick={()=>{                           
                             if(e.Guest>1){
                               update(e.id,e.Guest-1)
+                              setTotal(prev=>prev-1)
                             }
 
                           }}><i class="fa-solid fa-minus"></i></button>
@@ -136,6 +136,7 @@ const Nav = () => {
                           <button class="rg-qty-btn rg-qty-plus"  onClick={()=>{
                             if(e.Guest<5){
                             update(e.id,e.Guest+1)
+                            setTotal(prev=>prev+1)
                           }
                           }}><i class="fa-solid fa-plus"></i></button>
                         </div>
@@ -147,10 +148,16 @@ const Nav = () => {
               <i class="fa-solid fa-plus"></i> Add Room
             </button>
             <button class="rg-footer" id="rgAddRoom"  onClick={()=>{
+          
               if(count>1){
-                setCount(count-1)
-              }
-            }}>
+                setRmAndGuest(prev=>
+                  prev.map((item,index)=>
+                    index===count-1 ? {...item,Guest:1} : item
+                  )
+                )
+                setCount(prev=> prev-1)
+                setTotal(total-Number(addedRmAndGuest[count-1].Guest))
+              }}}>
               <i class="fa-solid fa-minus"></i>
               Remove Room
             </button>
