@@ -8592,11 +8592,49 @@ const Context = (props) => {
     Guest:1
   }
 ]);
+  const [places, setPlaces] = useState([
+    {
+      id:1,
+      stateName:"Maharashtra",
+      stays:127,
+      img:"https://t4.ftcdn.net/jpg/04/57/13/89/360_F_457138917_CMIfwv6U785yncAzsJ9sgUKypWyFxE64.jpg"
+    },
+    {
+      id:2,
+      stateName:"Goa",
+      stays:256,
+      img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw4VrtD3n2OK4-IS1uuhcbyOKRYZ0QQYIoWjbj2d4HW32GgVMJHjaCvqDW&s=10"
+    },
+    {
+      id:3,
+      stateName:"Bihar",
+      stays:147,
+      img:"https://hblimg.mmtcdn.com/content/hubble/img/states_img/mmt/activities/m_Bihar_landscape_1_l_667_1000.jpg"
+    },
+    {
+      id:4,
+      stateName:"Punjab",
+      stays:189,
+      img:"https://plus.unsplash.com/premium_photo-1697730331435-92e07494db43?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHVuamFifGVufDB8fDB8fHww"    
+    },
+    {
+      id:5,
+      stateName:"Rajasthan",
+      stays:202,
+      img:"https://s7ap1.scene7.com/is/image/incredibleindia/hawa-mahal-jaipur-rajasthan-city-1-hero?qlt=82&ts=1742200253577"
+    },
+    {
+      id:6,
+      stateName:"Uttar Pradesh",
+      stays:157,
+      img:"https://s7ap1.scene7.com/is/image/incredibleindia/dashashwamedh-ghat-varanasi-uttar-pradesh-city-hero?qlt=82&ts=1726649273578"
+    }
+  ])
   
   return (
     <div>
         <ContextData.Provider value={{hotelData,setHotelData,text,setText,checkInDate,setCheckInDate,checkOutDate,setCheckOutDate,
-          rmAndGuest,setRmAndGuest,fData,setFData,guest,setGuest
+          rmAndGuest,setRmAndGuest,fData,setFData,guest,setGuest,places,setPlaces
         }}
         >
             {props.children}
