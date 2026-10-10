@@ -88,7 +88,6 @@ const Hotel = () => {
               {e.rating} ({e.reviews} reviews)
             </div>
             <div class="offer-badge">{e.offer}</div>
-          
         </div>
  
         <div className="hotel-card__content">

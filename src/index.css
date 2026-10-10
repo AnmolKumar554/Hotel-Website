@@ -181,7 +181,7 @@
     font-size:13px;
     color:var(--dusk);
   }
-  .rg-box {
+   .rg-box {
     width: 210px;
     background: #F4FAFF;
     border: 1px solid #8789C0;
@@ -190,9 +190,19 @@
     box-shadow: 0 4px 14px rgba(8, 9, 10, 0.12);
     z-index: 999;
     min-height: 70px; 
-    transform: translate3d(568px,80px,0);
+    top: 83px;
+    left: 1050px;
   }
- 
+  @media (max-width: 1300px) {
+  .rg-box {
+    left:  clamp(50px, 60vw, 850px);
+  }
+}
+  @media (max-width:583px) {
+    .rg-box{
+      left: 20px;
+    }
+  }
   .rg-header {
     display: flex;
     align-items: center;
