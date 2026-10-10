@@ -82,11 +82,13 @@ const Hotel = () => {
                   src={e.image[0]}
                   alt={e.name}
                   />
-          <div className="rating-pill">
-            <i class="fa-solid fa-star"></i>
-            {e.rating} ({e.reviews} reviews)
-          </div>
-          <div class="offer-badge">{e.offer}</div>
+          
+            <div className="rating-pill">
+              <i class="fa-solid fa-star"></i>
+              {e.rating} ({e.reviews} reviews)
+            </div>
+            <div class="offer-badge">{e.offer}</div>
+          
         </div>
  
         <div className="hotel-card__content">

@@ -573,7 +573,7 @@
     box-shadow:0 8px 20px rgba(8,9,10,0.14);
   }
   .rating-pill i{ width:15px; height:15px; }
- 
+  
   /* ---------- Content ---------- */
  .offer-badge{
     position:absolute;
@@ -748,7 +748,7 @@
  
   /* ---------- Responsive ---------- */
  
-  @media (max-width:680px){
+  @media (max-width:791px){
     .hotel-card{ flex-direction:column; border-radius:20px; }
     .hotel-card__media{ min-height:200px; flex-basis:auto; }
     .hotel-card__content{ padding:24px 22px; gap:18px; }
@@ -758,7 +758,6 @@
     .hotel-card__footer{ flex-wrap:wrap; }
     .book-btn{ flex:1 1 auto; text-align:center; }
 }
-
 
   /* footer css */
  
