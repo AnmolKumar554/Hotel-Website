@@ -14,14 +14,18 @@ const Home = () => {
 
   function bestHotels(name){
     const newHotel=hotelData.filter((e)=> e.address.includes(name) && (e.rating>=4));
-    return (<article class="home-hotel-card">
+    return (<article class="home-hotel-card" onClick={()=>{
+      navigate(`/details/${newHotel[0].id}`)
+    }}>
               <div class="home-hotel-card__art home-hotel-art-1"><img src={newHotel[0].image[0]}></img></div>
-
                 <div class="home-hotel-card__body">
                   <h3 class="home-hotel-card__name">{newHotel[0].name}</h3>
                   <p class="home-hotel-card__state">{newHotel[0].address}</p>
                 <div class="home-hotel-card__rating"><i className="fa-regular fa-star"></i>{newHotel[0].rating} <span>({newHotel[0].reviews})</span></div>
-                <p class="home-hotel-card__price"><strong>₹{newHotel[0].price}</strong>/ night</p>
+                <div className='home-hotel-card__checking'>
+                  <p class="home-hotel-card__price"><strong>₹{newHotel[0].price}</strong>/ night</p>
+                  <button className='home-hotel-card__check-btn'>Details</button>
+                </div>
               </div>
             </article>)
   }
@@ -33,7 +37,7 @@ const Home = () => {
     <div class="home-brand"><svg><use href="#icon-logo"/></svg>Stay Way</div>
     <div class="home-topbar-actions">
       <span>Help</span>
-      <span class="home-sign-in">Sign in</span>
+      {/* <span class="home-sign-in">Sign in</span> */}
     </div>
   </div>
 </div>
@@ -47,12 +51,13 @@ const Home = () => {
         <h2 id="dest-heading">Popular  destinations</h2>
         <p class="home-kicker">Landmark towns worth building a trip around.</p>
       </div>
-      <a href="#" class="home-view-all">View all <svg><use href="#icon-arrow"/></svg></a>
+      {/* <a href="#" class="home-view-all">View all <svg><use href="#icon-arrow"/></svg></a> */}
     </div>
  
     <div class="home-dest-grid">
       {places.map((e)=>{
         return(<article class="home-dest-card" onClick={()=>{
+                  alert("use checkin and checkout dates from navigation for better results")
                   setText(e.stateName)
                   setCheckInDate("2026-09-03")
                   setCheckOutDate("2026-09-09")

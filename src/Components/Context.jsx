@@ -8630,11 +8630,13 @@ const Context = (props) => {
       img:"https://s7ap1.scene7.com/is/image/incredibleindia/dashashwamedh-ghat-varanasi-uttar-pradesh-city-hero?qlt=82&ts=1726649273578"
     }
   ])
+  const [total, setTotal] = useState(1)
+  const [count, setCount] = useState(1)
   
   return (
     <div>
         <ContextData.Provider value={{hotelData,setHotelData,text,setText,checkInDate,setCheckInDate,checkOutDate,setCheckOutDate,
-          rmAndGuest,setRmAndGuest,fData,setFData,guest,setGuest,places,setPlaces
+          rmAndGuest,setRmAndGuest,fData,setFData,guest,setGuest,places,setPlaces,total,setTotal,count,setCount
         }}
         >
             {props.children}

@@ -1,10 +1,9 @@
 import { useContext, useState } from "react"
-import { ContextData } from "./Context"
+import Context, { ContextData } from "./Context"
 import { UNSAFE_useScrollRestoration, useNavigate } from "react-router-dom"
 
 const Nav = () => {
 
-  
   const {hotelData,setHotelData} = useContext(ContextData)
   const {fData,setFData} = useContext(ContextData)
   const [display, setDisplay] = useState(false)
@@ -12,12 +11,10 @@ const Nav = () => {
   const {text,setText} = useContext(ContextData)
   const {checkInDate,setCheckInDate} = useContext(ContextData)
   const {checkOutDate,setCheckOutDate} = useContext(ContextData)
-  const [count, setCount] = useState(1)
-  const [total, setTotal] = useState(1)
-  const [finalTotal, setFinalTotal] = useState(0)
+  const {count, setCount} = useContext(ContextData)
+  const {total, setTotal} = useContext(ContextData)
   const {rmAndGuest,setRmAndGuest}=useContext(ContextData)
   const {rmData,setRmData} = useContext(ContextData)
-  
   
   const navigate=useNavigate()
 

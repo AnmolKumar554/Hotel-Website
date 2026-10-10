@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { ContextData } from './Context'
 
@@ -8,15 +8,28 @@ const Booking = () => {
   const hotel=hotelData.find((e)=>e.id===Number(id))
   const {checkInDate,setCheckInDate} = useContext(ContextData)
   const {checkOutDate,setCheckOutDate} = useContext(ContextData)
+  const {total, setTotal} = useContext(ContextData)
+  const {count, setCount} = useContext(ContextData)
+
+  function checkDate(ciDate){
+    if(ciDate>=hotel.availableFrom && ciDate<=hotel.availableTo && ciDate<checkOutDate){
+      return ciDate
+    }
+  }
+  function checkoDate(coDate){
+    if(coDate<=hotel.availableTo && coDate>=hotel.availableFrom && coDate>checkInDate){
+      return coDate
+    }
+  }
   return (
     <div>
       <div class="bk-topbar">
-    <div class="bk-wordmark">Tidewater</div>
+    {/* <div class="bk-wordmark">Tidewater</div> */}
     <Link class="bk-back-link" to={`/details/${hotel.id}`}> Back to {hotel.name}</Link>
   </div>
  
   <div class="bk-titleblock">
-    <div class="bk-swatch"></div>
+    {/* <div class="bk-swatch"></div> */}
     <div>
       <h1>Complete your booking</h1>
       <div class="bk-sub">{hotel.name} · {hotel.expandedAddress}</div>
@@ -31,20 +44,20 @@ const Booking = () => {
         <div class="bk-row-2">
           <div class="bk-field">
             <label for="bkCheckin">Check-in</label>
-            <input type="date" id="bkCheckin" value={checkInDate}></input>
+            <input type="date" id="bkCheckin" onClick={()=>{alert("change checkin dates and checkout dates through naviagtion bar ")}}  value={checkDate(checkInDate)}></input>
           </div>
           <div class="bk-field">
             <label for="bkCheckout">Check-out</label>
-            <input type="date" id="bkCheckout" value={checkOutDate}></input>
+            <input type="date" id="bkCheckout" onClick={()=>{alert("change checkin dates and checkout dates through naviagtion bar ")}} value={checkoDate(checkOutDate)}></input>
           </div>
         </div>
  
         <div class="bk-field">
-          <label>Guests</label>
+          <label>Room & Guests</label>
           <div class="bk-stepper">
-            <button type="button" class="bk-step-btn" id="bkGuestMinus">-</button>
-            <span class="bk-guest-count" id="bkGuestCount">2</span>
-            <button type="button" class="bk-step-btn" id="bkGuestPlus">+</button>
+            <button type="button" class="bk-step-btn" id="bkGuestMinus">{count}</button>
+            <span class="bk-guest-count" id="bkGuestCount">|</span>
+            <button type="button" class="bk-step-btn" id="bkGuestPlus">{total}</button>
           </div>
           <div class="bk-field-hint" id="bkGuestHint">Up to 5 guests for this cabin</div>
         </div>
@@ -54,12 +67,12 @@ const Booking = () => {
  
           <label class="bk-cabin-card">
             <input type="radio" name="bkCabin" value="Driftwood Suite" data-rate="189" data-max="4" checked></input>
-            <div class="bk-cabin-top"><span>Driftwood Suite</span><span>$189/night</span></div>
-            <div class="bk-cabin-sub">1 bedroom · sleeps up to 4 · private dock</div>
+            <div class="bk-cabin-top"><span>Driftwood Suite</span><span>₹{hotel.price}/night</span></div>
+            <div class="bk-cabin-sub">1 bedroom · sleeps up to 5 · private dock</div>
             <span class="bk-check-mark">✓</span>
           </label>
  
-          <label class="bk-cabin-card">
+          {/* <label class="bk-cabin-card">
             <input type="radio" name="bkCabin" value="Tidepool Room" data-rate="149" data-max="2"></input>
             <div class="bk-cabin-top"><span>Tidepool Room</span><span>$149/night</span></div>
             <div class="bk-cabin-sub">Studio · sleeps up to 2 · garden view</div>
@@ -71,7 +84,7 @@ const Booking = () => {
             <div class="bk-cabin-top"><span>Lighthouse Loft</span><span>$239/night</span></div>
             <div class="bk-cabin-sub">Loft · sleeps up to 3 · ocean-facing balcony</div>
             <span class="bk-check-mark">✓</span>
-          </label>
+          </label> */}
         </div>
       </section>
  
@@ -146,23 +159,22 @@ const Booking = () => {
  
     <aside class="bk-sidebar">
       <div class="bk-summary-card" id="bkSummaryCard">
-        <h3>Marrow Cabin</h3>
-        <div class="bk-loc">Sable Point, Nova Scotia</div>
+        <h3>{hotel.name}</h3>
+        <div class="bk-loc">{hotel.expandedAddress}</div>
  
         {/* <div class="bk-summary-line bk-dates"><span>Dates</span><strong id="bkSumDates"></strong></div> */}
-        <div class="bk-summary-line bk-guests"><span>Guests</span><strong id="bkSumGuests">2</strong></div>
+        <div class="bk-summary-line bk-guests"><span>Guests</span><strong id="bkSumGuests">{total}</strong></div>
         <div class="bk-summary-line"><span>Room</span><strong id="bkSumRoom">Driftwood Suite</strong></div>
  
         <div class="bk-divider"></div>
  
-        <div class="bk-price-row"><span id="bkRateLabel">$189 × 0 nights</span><span id="bkRateAmt">$0</span></div>
-        <div class="bk-price-row" id="bkExtraGuestRow" ><span>Extra guests</span><span id="bkExtraGuestAmt">$0</span></div>
-        <div class="bk-price-row" id="bkCleaningRow" ><span>Cleaning fee</span><span>$65</span></div>
-        <div class="bk-price-row" id="bkServiceRow" ><span>Service fee</span><span id="bkServiceAmt">$0</span></div>
-        <div class="bk-price-row" id="bkTaxRow" ><span>Taxes (13% HST)</span><span id="bkTaxAmt">$0</span></div>
-        <div class="bk-price-row bk-total"><span>Total</span><span id="bkTotalAmt">$0</span></div>
+        <div class="bk-price-row"><span id="bkRateLabel">{`Price`}</span><span id="bkRateAmt">₹{(hotel.price*count).toFixed(2)}</span></div>
+        <div class="bk-price-row" id="bkCleaningRow" ><span>Cleaning fee</span><span>₹{(0.01*(hotel.price*count)).toFixed(2)}</span></div>
+        <div class="bk-price-row" id="bkServiceRow" ><span>Service fee</span><span id="bkServiceAmt">₹{(0.005*(hotel.price*count)).toFixed(2)}</span></div>
+        <div class="bk-price-row" id="bkTaxRow" ><span>Taxes (13% HST)</span><span id="bkTaxAmt">₹{(0.13*(hotel.price*count)).toFixed(2)}</span></div>
+        <div class="bk-price-row bk-total"><span>Total</span><span id="bkTotalAmt">₹{Number((hotel.price*count).toFixed(2))+Number((0.01*(hotel.price*count)).toFixed(2))+Number((0.005*(hotel.price*count)).toFixed(2))+Number((0.13*(hotel.price*count)).toFixed(2))}</span></div>
  
-        <button class="bk-confirm-btn" id="bkConfirmBtn" disabled>Confirm &amp; book</button>
+        <button class="bk-confirm-btn" id="bkConfirmBtn" onClick={()=>{alert("this is enough for demo project")}}>Confirm &amp; book</button>
         <div class="bk-fine-print">Your card is charged in full once confirmed</div>
       </div>
  

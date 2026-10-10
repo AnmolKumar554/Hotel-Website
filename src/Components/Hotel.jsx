@@ -133,7 +133,7 @@ const Hotel = () => {
         </div>
       </div>
           </>
-        }})}
+      }})}
     </div>
     </div>
   </>

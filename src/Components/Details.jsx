@@ -8,6 +8,7 @@ const Details = () => {
   const hotel=hotelData.find((e)=>e.id===Number(id))
   const {checkInDate,setCheckInDate} = useContext(ContextData)
   const {checkOutDate,setCheckOutDate} = useContext(ContextData)
+  const {total, setTotal} = useContext(ContextData)
   return (
     <div className='hero-detail'>
         <Link to={"/data"} className="hd-back-link">
@@ -33,7 +34,7 @@ const Details = () => {
       <p class="hd-location"><i class="fa-solid fa-location-dot"></i> {hotel.expandedAddress}</p>
     </div>
     <a href="#reviews" class="hd-rating-block">
-      <span class="hd-rating-num">{hotel.rating}</span>
+      <span class="hd-rating-num"><i class="fa-solid fa-star"></i>{hotel.rating}</span>
       {/* <span class="hd-rating-stars" aria-hidden="true">★★★★☆</span> */}
       <span class="hd-rating-count">{hotel.reviews} reviews</span>
     </a>
@@ -86,35 +87,6 @@ const Details = () => {
  
       <hr></hr>
  
-      {/* <section class="hd-block">
-        <h2>Rooms</h2>
- 
-        <article class="hd-room">
-          <img src="https://picsum.photos/seed/maurya-deluxe/240/180" alt="Deluxe Room"></img>
-          <div class="hd-room-info">
-            <h3>Deluxe Room</h3>
-            <p class="hd-room-specs">2 guests · 1 bed · 28 m²</p>
-            <p class="hd-room-tags">WiFi · Air Conditioning</p>
-          </div>
-          <div class="hd-room-price">
-            <p class="hd-price">₹1,800<span>/night</span></p>
-            <button class="hd-select-btn">Select</button>
-          </div>
-        </article>
- 
-        <article class="hd-room">
-          <img src="https://picsum.photos/seed/maurya-exec/240/180" alt="Executive Suite"></img>
-          <div class="hd-room-info">
-            <h3>Executive Suite</h3>
-            <p class="hd-room-specs">3 guests · 2 beds · 42 m²</p>
-            <p class="hd-room-tags">WiFi · Air Conditioning · Room Service</p>
-          </div>
-          <div class="hd-room-price">
-            <p class="hd-price">₹3,200<span>/night</span></p>
-            <button class="hd-select-btn">Select</button>
-          </div>
-        </article>
-      </section> */}
  
     </div>
  
@@ -135,7 +107,7 @@ const Details = () => {
           </div>
           <div class="hd-field">
             <label>Guests</label>
-            <span>{hotel.Guest} adults</span>
+            <span>{total} adults</span>
           </div>
         </div>
  
@@ -153,7 +125,7 @@ const Details = () => {
     <p class="hd-price">₹{hotel.price}<span>/night</span></p>
     <p class="hd-sub">Deluxe Room</p>
   </div>
-  <button class="hd-book-btn">Book Now</button>
+  <Link to={`/booking/${hotel.id}`}><button class="hd-book-btn" >Book Now</button></Link>
 </div>
     </div>
   )
